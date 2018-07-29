@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Courgette:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/code.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/code.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="IP,局域网,C#," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="前言最近做项目时遇到一个需求：判断当前访问的用户，和服务器是否在同一个内网中，然后进行不同的跳转。说白了，就是先获取用户的 IP ，然后判断其是否属于内网 IP 。由于项目的语言是 C# ，所以这里我也是用 C# 进行记录。 方法获取用户的 IP 地址简单的来说，有两种方法可以获取到用户的IP，分别是 remote_addr 和 x_forwarded_for ，这两者区别如下[1]：  remo">
+<meta name="keywords" content="IP,局域网,C#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="根据 IP 判断访问页面的用户是否来自内网">
+<meta property="og:url" content="https://realchoi.com/2017/11/30/determine-whether-the-user-ip-is-from-the-intranet/index.html">
+<meta property="og:site_name" content="Choi&#39;s Notes">
+<meta property="og:description" content="前言最近做项目时遇到一个需求：判断当前访问的用户，和服务器是否在同一个内网中，然后进行不同的跳转。说白了，就是先获取用户的 IP ，然后判断其是否属于内网 IP 。由于项目的语言是 C# ，所以这里我也是用 C# 进行记录。 方法获取用户的 IP 地址简单的来说，有两种方法可以获取到用户的IP，分别是 remote_addr 和 x_forwarded_for ，这两者区别如下[1]：  remo">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-07T03:45:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="根据 IP 判断访问页面的用户是否来自内网">
+<meta name="twitter:description" content="前言最近做项目时遇到一个需求：判断当前访问的用户，和服务器是否在同一个内网中，然后进行不同的跳转。说白了，就是先获取用户的 IP ，然后判断其是否属于内网 IP 。由于项目的语言是 C# ，所以这里我也是用 C# 进行记录。 方法获取用户的 IP 地址简单的来说，有两种方法可以获取到用户的IP，分别是 remote_addr 和 x_forwarded_for ，这两者区别如下[1]：  remo">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://realchoi.com/2017/11/30/determine-whether-the-user-ip-is-from-the-intranet/"/>
+
+
+
+
+
+  <title>根据 IP 判断访问页面的用户是否来自内网 | Choi's Notes</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Choi's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://realchoi.com/2017/11/30/determine-whether-the-user-ip-is-from-the-intranet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="废菜">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar_smile.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Choi's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">根据 IP 判断访问页面的用户是否来自内网</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-30T08:00:00+08:00">
+                2017-11-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近做项目时遇到一个需求：判断当前访问的用户，和服务器是否在同一个内网中，然后进行不同的跳转。说白了，就是先获取用户的 IP ，然后判断其是否属于内网 IP 。由于项目的语言是 C# ，所以这里我也是用 C# 进行记录。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="获取用户的-IP-地址"><a href="#获取用户的-IP-地址" class="headerlink" title="获取用户的 IP 地址"></a>获取用户的 IP 地址</h3><p>简单的来说，有两种方法可以获取到用户的IP，分别是 <code>remote_addr</code> 和 <code>x_forwarded_for</code> ，这两者区别如下<code>[1]</code>：</p>
+<ul>
+<li><p><code>remote_addr</code> ：代表客户端的IP，但是它的值不是由客户端提供的，而是服务端根据客户端的 IP 指定的，当你的浏览器访问某个网站时，假设中间没有任何代理，那么网站的 Web 服务器（Nginx，Apache 等）就会把 <code>remote_addr</code> 设为你的机器 IP ；如果你使用了代理，那么你的浏览器会新访问这个代理，然后再由这个代理转发到网站，这样 Web 服务器就会把 <code>remote_addr</code> 设为这台代理机器的 IP 。</p>
+<p>通过 <code>remote_addr</code> 获取 IP 的代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string ip = HttpContext.Current.Request.ServerVariables[&quot;remote_addr&quot;];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>x_forwarded_for</code> ：正如上面所述，当你使用了代理时，Web 服务器就不知道你的真实 IP 了，为了避免这个情况，代理服务器通常会增加一个叫做 <code>x_forwarded_for</code> 的头信息，把连接它的客户端 IP（即你的上网机器 IP ）加到这个头信息里，这样就能保证网站的 Web 服务器能获取到真实 IP 。</p>
+<p>通过 <code>x_forwarded_for</code> 获取 IP 的代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string ip = HttpContext.Current.Request.ServerVariables[&quot;x_forwarded_for&quot;];</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<p>由于我们的用户提出这个功能，目的是供自己内部人员使用，并不存在伪造等各种复杂的情况，因此这里使用上述两种方法即可完成预期功能：</p>
+<ul>
+<li>先直接通过 <code>x_forwarded_for</code> 方式获取IP，以防止偶尔有人员挂上了代理。</li>
+<li>判断通过上述方法获取的 IP 是否为空，如果不为空（用户刚好使用了代理），则获取的 IP 即为用户的 IP ；如果为空（用户没有使用代理），则再使用 <code>remote_addr</code> 获取的 IP 作为用户的 IP 。</li>
+</ul>
+<p>至此，用户的 IP 我们已经拿到了。</p>
+<h3 id="判断用户的-IP-是否来自内网"><a href="#判断用户的-IP-是否来自内网" class="headerlink" title="判断用户的 IP 是否来自内网"></a>判断用户的 IP 是否来自内网</h3><p>内网（私有 IP ）有三类：</p>
+<ul>
+<li>A 类：10.0.0.0 - 10.255.255.255</li>
+<li>B 类：172.16.0.0 - 172.31.255.255</li>
+<li>C 类：192.168.0.0 - 192.168.255.255</li>
+<li>最后还有一个回环 IP 地址：127.0.0.1</li>
+</ul>
+<p>搞明白这个，也就容易了，即判断用户 IP 是否属于上述四类 IP 的范围即可。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>详细代码贴在下面：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">/// &lt;summary&gt;</span><br><span class="line">/// 获取真实IP地址</span><br><span class="line">/// &lt;/summary&gt;</span><br><span class="line">/// &lt;returns&gt;获取的用户IP&lt;/returns&gt;</span><br><span class="line">private static string GetIp()</span><br><span class="line">&#123;</span><br><span class="line">  	//直接获取使用代理情况下的IP</span><br><span class="line">	string ip = HttpContext.Current.Request.ServerVariables[&quot;http_x_forwarded_for&quot;];</span><br><span class="line">  	</span><br><span class="line">  	//如果上面获取的IP为空（即用户未使用代理），则直接获取客户端IP</span><br><span class="line">	if (String.IsNullOrEmpty(ip)) </span><br><span class="line">		ip = HttpContext.Current.Request.ServerVariables[&quot;remote_addr&quot;];</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		//代理ip地址有内容，判断是否符合IPv4地址或者是否为内网地址</span><br><span class="line">		ip = ip.Trim().Replace(&quot; &quot;, &quot;&quot;);</span><br><span class="line">		if (!Regex.IsMatch(ip, @&quot;^\d+(\.\d+)&#123;3&#125;$&quot;) || IsInnerIp(ip))</span><br><span class="line">        </span><br><span class="line">		//不符合规则或者内网，私有地址使用remote_addr代替</span><br><span class="line">		ip = HttpContext.Current.Request.ServerVariables[&quot;remote_addr&quot;];</span><br><span class="line">	&#125;</span><br><span class="line">	return ip;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/// &lt;summary&gt;</span><br><span class="line">/// 判断IP地址是否为内网IP地址</span><br><span class="line">/// &lt;/summary&gt;</span><br><span class="line">/// &lt;param name=&quot;ipAddress&quot;&gt;IP地址字符串&lt;/param&gt;</span><br><span class="line">/// &lt;returns&gt;是否是内网&lt;/returns&gt;</span><br><span class="line">private static bool IsInnerIp(String ipAddress)</span><br><span class="line">&#123;</span><br><span class="line">	long ipNum = GetIpNum(ipAddress);</span><br><span class="line">	long aBegin = GetIpNum(&quot;10.0.0.0&quot;);</span><br><span class="line">	long aEnd = GetIpNum(&quot;10.255.255.255&quot;);</span><br><span class="line">	long bBegin = GetIpNum(&quot;172.16.0.0&quot;);</span><br><span class="line">	long bEnd = GetIpNum(&quot;172.31.255.255&quot;);</span><br><span class="line">	long cBegin = GetIpNum(&quot;192.168.0.0&quot;);</span><br><span class="line">	long cEnd = GetIpNum(&quot;192.168.255.255&quot;);</span><br><span class="line">	bool isInnerIp = IsInner(ipNum, aBegin, aEnd) || IsInner(ipNum, bBegin, bEnd) || IsInner(ipNum, cBegin, cEnd) || ipAddress.Equals(&quot;127.0.0.1&quot;);</span><br><span class="line">	return isInnerIp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/// &lt;summary&gt;</span><br><span class="line">/// 判断用户IP地址转换为long类型后是否在内网IP地址所在范围</span><br><span class="line">/// &lt;/summary&gt;</span><br><span class="line">/// &lt;param name=&quot;userIp&quot;&gt;获得的用户IP&lt;/param&gt;</span><br><span class="line">/// &lt;param name=&quot;begin&quot;&gt;内网IP开始&lt;/param&gt;</span><br><span class="line">/// &lt;param name=&quot;end&quot;&gt;内网IP结束&lt;/param&gt;</span><br><span class="line">/// &lt;returns&gt;用户IP是否在内网IP范围内&lt;/returns&gt;</span><br><span class="line">private static bool IsInner(long userIp, long begin, long end)</span><br><span class="line">&#123;</span><br><span class="line">	return userIp &gt;= begin &amp;&amp; userIp &lt;= end;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/// &lt;summary&gt;</span><br><span class="line">/// 把IP地址转换为long类型数字</span><br><span class="line">/// &lt;/summary&gt;</span><br><span class="line">/// &lt;param name=&quot;ipAddress&quot;&gt;IP地址字符串&lt;/param&gt;</span><br><span class="line">/// &lt;returns&gt;IP转换为long类型的数字&lt;/returns&gt;</span><br><span class="line">private static long GetIpNum(String ipAddress)</span><br><span class="line">&#123;</span><br><span class="line">	String[] ip = ipAddress.Split(&apos;.&apos;);</span><br><span class="line">	long a = int.Parse(ip[0]);</span><br><span class="line">	long b = int.Parse(ip[1]);</span><br><span class="line">	long c = int.Parse(ip[2]);</span><br><span class="line">	long d = int.Parse(ip[3]);</span><br><span class="line">	long ipNum = a * 256 * 256 * 256 + b * 256 * 256 + c * 256 + d;</span><br><span class="line">	return ipNum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><code>[1]</code> <a href="http://blog.csdn.net/smilefyx/article/details/52120461" target="_blank" rel="noopener">怎样正确设置 remote_addr 和 x_forwarded_for</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/IP/" rel="tag"># IP</a>
+          
+            <a href="/tags/局域网/" rel="tag"># 局域网</a>
+          
+            <a href="/tags/C/" rel="tag"># C#</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/29/cloudflare-for-free-domain-forwarding/" rel="next" title="利用 Cloudflare 进行免费的域名转发">
+                <i class="fa fa-chevron-left"></i> 利用 Cloudflare 进行免费的域名转发
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/10/implement-single-linkedlist-in-java/" rel="prev" title="使用 Java 实现单向链表">
+                使用 Java 实现单向链表 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar_smile.png"
+                alt="废菜" />
+            
+              <p class="site-author-name" itemprop="name">废菜</p>
+              <p class="site-description motion-element" itemprop="description">别看了，都是我瞎写的。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/realchoi" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://twitter.com/poorcai" target="_blank" title="Twitter">
+                    
+                      <i class="fa fa-fw fa-twitter"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:meetcds@gmail.com" target="_blank" title="Email">
+                    
+                      <i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              </a>
+            </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-globe"></i>
+                Link
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://loading.life" title="Life's Loading" target="_blank">Life's Loading</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-text">方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取用户的-IP-地址"><span class="nav-text">获取用户的 IP 地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断用户的-IP-是否来自内网"><span class="nav-text">判断用户的 IP 是否来自内网</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">废菜</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://realchoi.com/2017/11/30/determine-whether-the-user-ip-is-from-the-intranet/';
+          this.page.identifier = '2017/11/30/determine-whether-the-user-ip-is-from-the-intranet/';
+          this.page.title = '根据 IP 判断访问页面的用户是否来自内网';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://realchoi.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

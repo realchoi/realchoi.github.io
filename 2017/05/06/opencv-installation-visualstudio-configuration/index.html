@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Courgette:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/code.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/code.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="OpenCV,Visual Studio," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="前言大学四年很快就结束了，前面玩了三年六个月，最后六个月，怎么说也得学点点点点点东西吧… 额，我说的就是毕业设计（笑）。 很幸运，我选到一位很喜欢的老师做我的导师，他给我出的题目也相对不错，所以我在做的时候，也 “相对” 比较用心。 课题需要用到 OpenCV 和 Visual Studio ，所以这里记录一下在 Visual Studio 里配置 OpenCV 的相关方法。">
+<meta name="keywords" content="OpenCV,Visual Studio">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenCV 的安装与 Visual Studio 环境的配置">
+<meta property="og:url" content="https://realchoi.com/2017/05/06/opencv-installation-visualstudio-configuration/index.html">
+<meta property="og:site_name" content="Choi&#39;s Notes">
+<meta property="og:description" content="前言大学四年很快就结束了，前面玩了三年六个月，最后六个月，怎么说也得学点点点点点东西吧… 额，我说的就是毕业设计（笑）。 很幸运，我选到一位很喜欢的老师做我的导师，他给我出的题目也相对不错，所以我在做的时候，也 “相对” 比较用心。 课题需要用到 OpenCV 和 Visual Studio ，所以这里记录一下在 Visual Studio 里配置 OpenCV 的相关方法。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/df837310gy1ffby718pfaj20pq06kdgo.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/df837310gy1ffbysno8n1j20ag0br4hk.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/df837310gy1ffbytmvensj20qa0ga3zw.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/df837310gy1ffbytvfge4j20db0gmdg8.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/df837310gy1ffbyu7q9l1j20h60ibq3p.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/df837310gy1ffbyuh24uqj20en0fn0ta.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/df837310gy1ffbzh7tp9oj20q50fzabf.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/df837310gy1ffbzhk1bshj20ij0dgq33.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/df837310gy1ffbzhtlqcdj20ij0dg0sz.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/df837310gy1ffbzi20abtj211y0lc42d.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/df837310gy1ffbziagkmfj211y0kgdh9.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/df837310gy1ffbziil12vj20oe0ghjsi.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/df837310gy1ffbziqplcpj20bq0b23yn.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/df837310gy1ffbzsa7yu0j20oe0gh0tu.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/df837310gy1ffbzsnwbpnj20bq0b2aa6.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/df837310gy1ffbzxliyazj20oe0gh758.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/df837310gy1ffc019g5dqj20bq0dc74h.jpg">
+<meta property="og:updated_time" content="2017-12-07T03:45:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="OpenCV 的安装与 Visual Studio 环境的配置">
+<meta name="twitter:description" content="前言大学四年很快就结束了，前面玩了三年六个月，最后六个月，怎么说也得学点点点点点东西吧… 额，我说的就是毕业设计（笑）。 很幸运，我选到一位很喜欢的老师做我的导师，他给我出的题目也相对不错，所以我在做的时候，也 “相对” 比较用心。 课题需要用到 OpenCV 和 Visual Studio ，所以这里记录一下在 Visual Studio 里配置 OpenCV 的相关方法。">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/df837310gy1ffby718pfaj20pq06kdgo.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://realchoi.com/2017/05/06/opencv-installation-visualstudio-configuration/"/>
+
+
+
+
+
+  <title>OpenCV 的安装与 Visual Studio 环境的配置 | Choi's Notes</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Choi's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://realchoi.com/2017/05/06/opencv-installation-visualstudio-configuration/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="废菜">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar_smile.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Choi's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">OpenCV 的安装与 Visual Studio 环境的配置</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-06T08:00:00+08:00">
+                2017-05-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>大学四年很快就结束了，前面玩了三年六个月，最后六个月，怎么说也得学点点点点点东西吧…</p>
+<p>额，我说的就是毕业设计（笑）。</p>
+<p>很幸运，我选到一位很喜欢的老师做我的导师，他给我出的题目也相对不错，所以我在做的时候，也 “相对” 比较用心。</p>
+<p>课题需要用到 OpenCV 和 Visual Studio ，所以这里记录一下在 Visual Studio 里配置 OpenCV 的相关方法。<br><a id="more"></a></p>
+<h2 id="下载和安装-OpenCV-SDK"><a href="#下载和安装-OpenCV-SDK" class="headerlink" title="下载和安装 OpenCV SDK"></a>下载和安装 OpenCV SDK</h2><p>进行这个步骤之前，默认你已经安装了 Visual Studio（我安装的是 Visual Studio 2012 ）。</p>
+<p>打开 OpenCV 官方的下载地址：<a href="http://opencv.org/releases.html" target="_blank" rel="noopener">http://opencv.org/releases.html</a>，选择对应的版本即可直接下载。下载完成后，直接双击文件，会提示解压到某个地方，比如 D:\opencv249 ，然后点击 Extract 按钮。稍候几分钟，在 D:\opencv249 下就会得到一个 opencv 文件夹，里面就是 OpenCV 的各种文件了。</p>
+<p><img src="https://ws1.sinaimg.cn/large/df837310gy1ffby718pfaj20pq06kdgo.jpg" alt=""><br><br></p>
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><p>配置步骤如下：</p>
+<p>右击【计算机】→【属性】→【高级系统设置】→【环境变量】→双击【系统变量】中的【Path】→【新建】，将相应的路径添加进去。</p>
+<p>对于32位系统，添加路径：”…opencv\build\x86\vc10\bin”；</p>
+<p>对于64位系统，添加路径：”…opencv\build\x86\vc10\bin”、”…opencv\build\x64\vc10\bin”。</p>
+<p>步骤图示：</p>
+<p>【1】</p>
+<p><img src="https://ws1.sinaimg.cn/large/df837310gy1ffbysno8n1j20ag0br4hk.jpg" alt=""></p>
+<p>【2】</p>
+<p><img src="https://ws1.sinaimg.cn/large/df837310gy1ffbytmvensj20qa0ga3zw.jpg" alt=""></p>
+<p>【3】</p>
+<p><img src="https://ws1.sinaimg.cn/large/df837310gy1ffbytvfge4j20db0gmdg8.jpg" alt=""></p>
+<p>【4】</p>
+<p><img src="https://ws1.sinaimg.cn/large/df837310gy1ffbyu7q9l1j20h60ibq3p.jpg" alt=""></p>
+<p>【5】</p>
+<p><img src="https://ws1.sinaimg.cn/large/df837310gy1ffbyuh24uqj20en0fn0ta.jpg" alt=""><br><br></p>
+<h2 id="工程包含目录（include）的配置"><a href="#工程包含目录（include）的配置" class="headerlink" title="工程包含目录（include）的配置"></a>工程包含目录（include）的配置</h2><p>打开 Visual Studio ，【新建】→【项目】→【Visual C++】→【Win32控制台应用程序】（此时在下面给项目命名，比如“Test”）→【确定】→【下一步】→把【空项目】打上勾（此时项目建立完成）→【视图】→【其他窗口】→【属性管理器】→双击【Microsoft.Cpp.Win32.user】→【VC++目录】→【包含目录】，在这里添加上以下三个目录：</p>
+<p>“…opencv\build\include”</p>
+<p>“…opencv\build\include\opencv”</p>
+<p>“…opencv\build\include\opencv2”</p>
+<p>步骤图示：</p>
+<p>【1】</p>
+<p><img src="https://ws1.sinaimg.cn/large/df837310gy1ffbzh7tp9oj20q50fzabf.jpg" alt=""></p>
+<p>【2】</p>
+<p><img src="https://ws1.sinaimg.cn/large/df837310gy1ffbzhk1bshj20ij0dgq33.jpg" alt=""></p>
+<p>【3】</p>
+<p><img src="https://ws1.sinaimg.cn/large/df837310gy1ffbzhtlqcdj20ij0dg0sz.jpg" alt=""></p>
+<p>【4】</p>
+<p><img src="https://ws1.sinaimg.cn/large/df837310gy1ffbzi20abtj211y0lc42d.jpg" alt=""></p>
+<p>【5】</p>
+<p><img src="https://ws1.sinaimg.cn/large/df837310gy1ffbziagkmfj211y0kgdh9.jpg" alt=""></p>
+<p>【6】</p>
+<p><img src="https://ws1.sinaimg.cn/large/df837310gy1ffbziil12vj20oe0ghjsi.jpg" alt=""></p>
+<p>【7】</p>
+<p><img src="https://ws1.sinaimg.cn/large/df837310gy1ffbziqplcpj20bq0b23yn.jpg" alt=""><br><br></p>
+<h2 id="工程库（lib）目录的配置"><a href="#工程库（lib）目录的配置" class="headerlink" title="工程库（lib）目录的配置"></a>工程库（lib）目录的配置</h2><p>接 3.6 步，在库目录中添加以下目录：</p>
+<p>“…opencv\build\x86\vc11\lib”</p>
+<p>（这里到底是选择 x86 还是 x64 ，取决于你编译时选择的是 Win32 还是 x64 ，但是一般情况下，我们用的都是 Win32 的 x86 编译器，因此建议选择 x86 。）</p>
+<p>步骤图示：</p>
+<p>……</p>
+<p>【6】</p>
+<p><img src="https://ws1.sinaimg.cn/large/df837310gy1ffbzsa7yu0j20oe0gh0tu.jpg" alt=""></p>
+<p>【7】</p>
+<p><img src="https://ws1.sinaimg.cn/large/df837310gy1ffbzsnwbpnj20bq0b2aa6.jpg" alt=""><br><br></p>
+<h2 id="链接库的配置"><a href="#链接库的配置" class="headerlink" title="链接库的配置"></a>链接库的配置</h2><p>依然是“属性管理器”工作区中，双击（或者右键属性）【Microsoft.Cpp.Win32.user】→【通用属性】 →【链接器】→【输入】→【附加的依赖项】</p>
+<p><img src="https://ws1.sinaimg.cn/large/df837310gy1ffbzxliyazj20oe0gh758.jpg" alt=""></p>
+<p>对于【OpenCV2.4.9】，添加如下 249 版本的 lib（这样的 lib 顺序是：19个带 <code>d</code> 的 debug 版的 lib 写在前面，19 个不带 <code>d</code> 的 release 版的 lib 写在后面）：</p>
+<p>opencv_ml249d.lib<br>opencv_calib3d249d.lib<br>opencv_contrib249d.lib<br>opencv_core249d.lib<br>opencv_features2d249d.lib<br>opencv_flann249d.lib<br>opencv_gpu249d.lib<br>opencv_highgui249d.lib<br>opencv_imgproc249d.lib<br>opencv_legacy249d.lib<br>opencv_objdetect249d.lib<br>opencv_ts249d.lib<br>opencv_video249d.lib<br>opencv_nonfree249d.lib<br>opencv_ocl249d.lib<br>opencv_photo249d.lib<br>opencv_stitching249d.lib<br>opencv_superres249d.lib<br>opencv_videostab249d.lib</p>
+<p>opencv_objdetect249.lib<br>opencv_ts249.lib<br>opencv_video249.lib<br>opencv_nonfree249.lib<br>opencv_ocl249.lib<br>opencv_photo249.lib<br>opencv_stitching249.lib<br>opencv_superres249.lib<br>opencv_videostab249.lib<br>opencv_calib3d249.lib<br>opencv_contrib249.lib<br>opencv_core249.lib<br>opencv_features2d249.lib<br>opencv_flann249.lib<br>opencv_gpu249.lib<br>opencv_highgui249.lib<br>opencv_imgproc249.lib<br>opencv_legacy249.lib<br>opencv_ml249.lib</p>
+<p><img src="https://ws1.sinaimg.cn/large/df837310gy1ffc019g5dqj20bq0dc74h.jpg" alt=""></p>
+<p>对于【OpenCV 3.0】，添加 3.0 版本的 lib ，新版的 lib 非常简单。想用 debug 版本的库，添加 opencv_ts300d.lib 和  opencv_world300d.lib 即可。</p>
+<p>而想用 release 版本的库，添加</p>
+<p>opencv_ts300.lib 和 opencv_world300.lib 即可。</p>
+<p>其实，对已经发行和未来即将发布的新版 OpenCV ，只需看 opencv\build\x86\vc10\lib 下的库是哪几个，添加成依赖项就可以了。<br><br></p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>点击【解决方案资源管理器】→右击【源文件】→【添加】→【新建项】→【Visual C++】→【C++文件（.cpp）】（此时给文件命名，比如main.cpp）→【添加】，把以下代码复制到该文件中。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;  </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/core/core.hpp&gt;  </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/highgui/highgui.hpp&gt;  </span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;  </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>  </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">    <span class="comment">// 读入一张图片（测试）  </span></span><br><span class="line">    Mat img=imread(<span class="string">"pic.jpg"</span>);  </span><br><span class="line">    <span class="comment">// 创建一个名为"测试"窗口  </span></span><br><span class="line">    namedWindow(<span class="string">"测试"</span>);  </span><br><span class="line">    <span class="comment">// 在窗口中显示测试图片  </span></span><br><span class="line">    imshow(<span class="string">"测试"</span>,img);  </span><br><span class="line">    <span class="comment">// 等待6000ms后窗口自动关闭  </span></span><br><span class="line">    waitKey(<span class="number">6000</span>);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>放置一张名为 “pic.jpg” 的图片到工程目录中，然后点击“运行“按钮，如果配置成功，就不会报错，得到预想的运行结果：弹出窗口，显示 “pic.jpg” 图片。<br><br></p>
+<h2 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h2><p>本文参考 CSDN 博客撰写，原文链接：<a href="http://blog.csdn.net/poem_qianmo/article/details/19809337" target="_blank" rel="noopener">http://blog.csdn.net/poem_qianmo/article/details/19809337</a>。</p>
+<h2 id="识别程序"><a href="#识别程序" class="headerlink" title="识别程序"></a>识别程序</h2><p>最后附上自己做的一个简单的手写英文字母识别程序的Github地址：<a href="https://github.com/realchoi/CharacterRecognition" target="_blank" rel="noopener">https://github.com/realchoi/CharacterRecognition</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/OpenCV/" rel="tag"># OpenCV</a>
+          
+            <a href="/tags/Visual-Studio/" rel="tag"># Visual Studio</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/01/hello-world/" rel="next" title="Hello, World！">
+                <i class="fa fa-chevron-left"></i> Hello, World！
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/02/shadowsocks-4-in-1/" rel="prev" title="Shadowsocks 一键安装脚本（四合一）">
+                Shadowsocks 一键安装脚本（四合一） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar_smile.png"
+                alt="废菜" />
+            
+              <p class="site-author-name" itemprop="name">废菜</p>
+              <p class="site-description motion-element" itemprop="description">别看了，都是我瞎写的。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/realchoi" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://twitter.com/poorcai" target="_blank" title="Twitter">
+                    
+                      <i class="fa fa-fw fa-twitter"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:meetcds@gmail.com" target="_blank" title="Email">
+                    
+                      <i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              </a>
+            </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-globe"></i>
+                Link
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://loading.life" title="Life's Loading" target="_blank">Life's Loading</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载和安装-OpenCV-SDK"><span class="nav-text">下载和安装 OpenCV SDK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置环境变量"><span class="nav-text">配置环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工程包含目录（include）的配置"><span class="nav-text">工程包含目录（include）的配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工程库（lib）目录的配置"><span class="nav-text">工程库（lib）目录的配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接库的配置"><span class="nav-text">链接库的配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-text">测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版权声明"><span class="nav-text">版权声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#识别程序"><span class="nav-text">识别程序</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">废菜</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://realchoi.com/2017/05/06/opencv-installation-visualstudio-configuration/';
+          this.page.identifier = '2017/05/06/opencv-installation-visualstudio-configuration/';
+          this.page.title = 'OpenCV 的安装与 Visual Studio 环境的配置';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://realchoi.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
