@@ -111,18 +111,18 @@
 
 
 
-<meta name="description" content="前言做 .NET 项目时需要用到微软自家的 ORM 框架 Entity Framework，由于之前学识比较浅，没有接触过 Entity Framework，趁着这个机会，赶紧 Google 了一下相关教程，这里就在前辈们的教程基础上，记录一下相关要点，供自己以后查阅。 Entity Framework 在 Code First 模式下与数据库的连接Entity Framework 数据库连接配置">
+<meta name="description" content="前言做 .NET 项目时需要用到微软自家的 ORM 框架 Entity Framework，由于之前学识比较浅，没有接触过 Entity Framework，趁着这个机会，赶紧 Google 了一下相关教程，这里就在前辈们的教程基础上，记录一下相关要点，供自己以后查阅。">
 <meta name="keywords" content=".NET,Entity Framwork">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Entity Framework 学习笔记">
 <meta property="og:url" content="https://blog.realchoi.com/2018/08/01/notes-of-learning-entity-framework/index.html">
 <meta property="og:site_name" content="Choi&#39;s Notes">
-<meta property="og:description" content="前言做 .NET 项目时需要用到微软自家的 ORM 框架 Entity Framework，由于之前学识比较浅，没有接触过 Entity Framework，趁着这个机会，赶紧 Google 了一下相关教程，这里就在前辈们的教程基础上，记录一下相关要点，供自己以后查阅。 Entity Framework 在 Code First 模式下与数据库的连接Entity Framework 数据库连接配置">
+<meta property="og:description" content="前言做 .NET 项目时需要用到微软自家的 ORM 框架 Entity Framework，由于之前学识比较浅，没有接触过 Entity Framework，趁着这个机会，赶紧 Google 了一下相关教程，这里就在前辈们的教程基础上，记录一下相关要点，供自己以后查阅。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-01T07:49:59.511Z">
+<meta property="og:updated_time" content="2018-08-01T07:53:27.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Entity Framework 学习笔记">
-<meta name="twitter:description" content="前言做 .NET 项目时需要用到微软自家的 ORM 框架 Entity Framework，由于之前学识比较浅，没有接触过 Entity Framework，趁着这个机会，赶紧 Google 了一下相关教程，这里就在前辈们的教程基础上，记录一下相关要点，供自己以后查阅。 Entity Framework 在 Code First 模式下与数据库的连接Entity Framework 数据库连接配置">
+<meta name="twitter:description" content="前言做 .NET 项目时需要用到微软自家的 ORM 框架 Entity Framework，由于之前学识比较浅，没有接触过 Entity Framework，趁着这个机会，赶紧 Google 了一下相关教程，这里就在前辈们的教程基础上，记录一下相关要点，供自己以后查阅。">
 
 
 
@@ -364,6 +364,7 @@
 
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>做 .NET 项目时需要用到微软自家的 ORM 框架 Entity Framework，由于之前学识比较浅，没有接触过 Entity Framework，趁着这个机会，赶紧 Google 了一下相关教程，这里就在前辈们的教程基础上，记录一下相关要点，供自己以后查阅。</p>
+<a id="more"></a>
 <h2 id="Entity-Framework-在-Code-First-模式下与数据库的连接"><a href="#Entity-Framework-在-Code-First-模式下与数据库的连接" class="headerlink" title="Entity Framework 在 Code First 模式下与数据库的连接"></a>Entity Framework 在 Code First 模式下与数据库的连接</h2><h3 id="Entity-Framework-数据库连接配置"><a href="#Entity-Framework-数据库连接配置" class="headerlink" title="Entity Framework 数据库连接配置"></a>Entity Framework 数据库连接配置</h3><p>在安装了 Entity Framework 后，会自动添加一个<code>App.config</code>文件，在该文件中配置<code>defaultConnectionFactory</code>节点，此后不需要再在其他地方进行数据库连接的配置，也不需要指定数据库连接，具体如下：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">configSections</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">section</span> <span class="attr">name</span>=<span class="string">"entityFramework"</span> <span class="attr">type</span>=<span class="string">"System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"</span> <span class="attr">requirePermission</span>=<span class="string">"false"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">configSections</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">entityFramework</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">defaultConnectionFactory</span> <span class="attr">type</span>=<span class="string">"System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">parameters</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">parameter</span> <span class="attr">value</span>=<span class="string">"Data Source=(local); Database=ExamDatabase; User ID=sa; Password=; MultipleActiveResultSets=True"</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">parameters</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">defaultConnectionFactory</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">entityFramework</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>除了上述配置方法外，还可以配置常用的<code>connectionStrings</code>，修改<code>App.config</code>文件如下即可：</p>
