@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Courgette:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/code.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/code.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content=".NET,Entity Framwork," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="前言做 .NET 项目时需要用到微软自家的 ORM 框架 Entity Framework，由于之前学识比较浅，没有接触过 Entity Framework，趁着这个机会，赶紧 Google 了一下相关教程，这里就在前辈们的教程基础上，记录一下相关要点，供自己以后查阅。 Entity Framework 在 Code First 模式下与数据库的连接Entity Framework 数据库连接配置">
+<meta name="keywords" content=".NET,Entity Framwork">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Entity Framework 学习笔记">
+<meta property="og:url" content="https://blog.realchoi.com/2018/08/01/notes-of-learning-entity-framework/index.html">
+<meta property="og:site_name" content="Choi&#39;s Notes">
+<meta property="og:description" content="前言做 .NET 项目时需要用到微软自家的 ORM 框架 Entity Framework，由于之前学识比较浅，没有接触过 Entity Framework，趁着这个机会，赶紧 Google 了一下相关教程，这里就在前辈们的教程基础上，记录一下相关要点，供自己以后查阅。 Entity Framework 在 Code First 模式下与数据库的连接Entity Framework 数据库连接配置">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-01T07:49:59.511Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Entity Framework 学习笔记">
+<meta name="twitter:description" content="前言做 .NET 项目时需要用到微软自家的 ORM 框架 Entity Framework，由于之前学识比较浅，没有接触过 Entity Framework，趁着这个机会，赶紧 Google 了一下相关教程，这里就在前辈们的教程基础上，记录一下相关要点，供自己以后查阅。 Entity Framework 在 Code First 模式下与数据库的连接Entity Framework 数据库连接配置">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://blog.realchoi.com/2018/08/01/notes-of-learning-entity-framework/"/>
+
+
+
+
+
+  <title>Entity Framework 学习笔记 | Choi's Notes</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Choi's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.realchoi.com/2018/08/01/notes-of-learning-entity-framework/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="废菜">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar_smile.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Choi's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Entity Framework 学习笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-01T08:00:00+08:00">
+                2018-08-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/08/01/notes-of-learning-entity-framework/" class="leancloud_visitors" data-flag-title="Entity Framework 学习笔记">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>做 .NET 项目时需要用到微软自家的 ORM 框架 Entity Framework，由于之前学识比较浅，没有接触过 Entity Framework，趁着这个机会，赶紧 Google 了一下相关教程，这里就在前辈们的教程基础上，记录一下相关要点，供自己以后查阅。</p>
+<h2 id="Entity-Framework-在-Code-First-模式下与数据库的连接"><a href="#Entity-Framework-在-Code-First-模式下与数据库的连接" class="headerlink" title="Entity Framework 在 Code First 模式下与数据库的连接"></a>Entity Framework 在 Code First 模式下与数据库的连接</h2><h3 id="Entity-Framework-数据库连接配置"><a href="#Entity-Framework-数据库连接配置" class="headerlink" title="Entity Framework 数据库连接配置"></a>Entity Framework 数据库连接配置</h3><p>在安装了 Entity Framework 后，会自动添加一个<code>App.config</code>文件，在该文件中配置<code>defaultConnectionFactory</code>节点，此后不需要再在其他地方进行数据库连接的配置，也不需要指定数据库连接，具体如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">configSections</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">section</span> <span class="attr">name</span>=<span class="string">"entityFramework"</span> <span class="attr">type</span>=<span class="string">"System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"</span> <span class="attr">requirePermission</span>=<span class="string">"false"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">configSections</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">entityFramework</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">defaultConnectionFactory</span> <span class="attr">type</span>=<span class="string">"System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">parameters</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">parameter</span> <span class="attr">value</span>=<span class="string">"Data Source=(local); Database=ExamDatabase; User ID=sa; Password=; MultipleActiveResultSets=True"</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">parameters</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">defaultConnectionFactory</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">entityFramework</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>除了上述配置方法外，还可以配置常用的<code>connectionStrings</code>，修改<code>App.config</code>文件如下即可：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">connectionStrings</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">add</span> <span class="attr">name</span>=<span class="string">"ExamContext"</span> <span class="attr">connectionString</span>=<span class="string">"Data Source=(local); Database=ExamDatabase; User ID=sa; Password=; MultipleActiveResultSets=True"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">providerName</span>=<span class="string">"System.Data.SqlClient"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">connectionStrings</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Entity-Framework-DbContext-连接数据库"><a href="#Entity-Framework-DbContext-连接数据库" class="headerlink" title="Entity Framework DbContext 连接数据库"></a>Entity Framework DbContext 连接数据库</h3><p>新建一个自定义的 <code>DbContext</code> 类 <code>ExamContext</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">using System;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line">using System.Linq;</span><br><span class="line">using System.Text;</span><br><span class="line">using System.Data.Entity;</span><br><span class="line"></span><br><span class="line">namespace Example</span><br><span class="line">&#123;</span><br><span class="line">    public class ExamContext : DbContext</span><br><span class="line">    &#123;</span><br><span class="line">        static ExamContext()</span><br><span class="line">        &#123;</span><br><span class="line">        	Database.SetInitializer&lt;ExamContext&gt;(null);</span><br><span class="line">        	//Database.SetInitializer(new CreateDatabaseIfNotExists&lt;ExamContext&gt;());</span><br><span class="line">            //Database.SetInitializer(new DropCreateDatabaseAlways&lt;ExamContext&gt;());</span><br><span class="line">            //Database.SetInitializer(new DropCreateDatabaseIfModelChanges&lt;ExamContext&gt;());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        public ExamContext() : base(&quot;name=ExamContext&quot;)</span><br><span class="line">        &#123;</span><br><span class="line">        	// 禁用延迟加载</span><br><span class="line">    		this.Configuration.LazyLoadingEnabled = false;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        protected override void OnModelCreating(DbModelBuilder modelBuilder)</span><br><span class="line">        &#123;</span><br><span class="line">        	// 禁用一对多级联删除</span><br><span class="line">    		modelBuilder.Conventions.Remove&lt;OneToManyCascadeDeleteConvention&gt;();</span><br><span class="line">    		// 禁用多对多级联删除</span><br><span class="line">    		modelBuilder.Conventions.Remove&lt;ManyToManyCascadeDeleteConvention&gt;();</span><br><span class="line">    		// 禁用默认表名复数形式</span><br><span class="line">    		modelBuilder.Conventions.Remove&lt;PluralizingTableNameConvention&gt;();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在使用 <code>DbContext</code> 时，就用到了 <code>App.config</code> 文件中配置的<code>connectionStrings</code>，因为在构造方法中指定了连接字符串<code>ExamContext</code>。</p>
+<h4 id="DBContext-数据库初始化方式"><a href="#DBContext-数据库初始化方式" class="headerlink" title="DBContext 数据库初始化方式"></a>DBContext 数据库初始化方式</h4><p>Entity Framework 通过<code>Database.SetInitializer</code>来指定需要的数据库初始化方式，可指定的数据库一共有三种：</p>
+<h5 id="CreateDatabaseIfNotExist"><a href="#CreateDatabaseIfNotExist" class="headerlink" title="CreateDatabaseIfNotExist"></a><code>CreateDatabaseIfNotExist</code></h5><p><code>CreateDatabaseIfNotExist</code>是初始化数据库的默认方式，用于当数据库不存在时，自动创建数据库。由于该方式是默认的，所以可以不用写代码，当然也可以用代码来指定：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Database.SetInitializer(new CreateDatabaseIfNotExists&lt;ExamContext&gt;());</span><br></pre></td></tr></table></figure>
+<h5 id="DropCreateDatabaseWhenModelChanges"><a href="#DropCreateDatabaseWhenModelChanges" class="headerlink" title="DropCreateDatabaseWhenModelChanges"></a><code>DropCreateDatabaseWhenModelChanges</code></h5><p><code>DropCreateDatabaseWhenModelChanges</code>用于当数据模型发生改变时，先删除原数据库，再创建新数据库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Database.SetInitializer(new DropCreateDatabaseWhenModelChanges&lt;ExamContext&gt;)();</span><br></pre></td></tr></table></figure>
+<h5 id="DropCreateDatabaseAlways"><a href="#DropCreateDatabaseAlways" class="headerlink" title="DropCreateDatabaseAlways"></a><code>DropCreateDatabaseAlways</code></h5><p><code>DropCreateDatabaseAlways</code>用于每次创建数据库前，均先删除原有的数据库，无论数据模型是否发生变化：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Database.SetInitializer(new DropCreateDatabaseAlways&lt;ExamContext&gt;)();</span><br></pre></td></tr></table></figure>
+<p>然而，更多的时候，我们希望 Entity Framework Code First 在与数据库不匹配时，宁可报出数据库连接错误，而不希望对数据库进行任何的删除创建操作，这时我们可以使用 Entity Framework 提供的关闭数据库初始化操作：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Database.SetInitializer&lt;ExamContext&gt;(null);</span><br></pre></td></tr></table></figure>
+<p>我们可以在静态构造方法中设置上述的数据库初始化方式。</p>
+<h4 id="DbContext-连接数据库的一些设置"><a href="#DbContext-连接数据库的一些设置" class="headerlink" title="DbContext 连接数据库的一些设置"></a>DbContext 连接数据库的一些设置</h4><p>在实际使用 Entity Framework Code First 操作数据库时，通常会在继承自<code>DbContext</code>的类中做一些数据库操作设置。</p>
+<h5 id="禁用延迟加载"><a href="#禁用延迟加载" class="headerlink" title="禁用延迟加载"></a>禁用延迟加载</h5><p>有的时候我们可能需要禁用延迟加载（LazyLoading），这就需要在代码中设置一下（关于延迟加载的优点和缺点，暂时可以先参考文章 <a href="https://blog.csdn.net/qq1010885678/article/details/38238265" target="_blank" rel="noopener">EF 使用延迟加载的本质原因</a>）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public ExamContext() : base(&quot;name=ExamContext&quot;)</span><br><span class="line">&#123;</span><br><span class="line">    // 禁用延迟加载</span><br><span class="line">    this.Configuration.LazyLoadingEnabled = false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="禁用关系数据的级联删除"><a href="#禁用关系数据的级联删除" class="headerlink" title="禁用关系数据的级联删除"></a>禁用关系数据的级联删除</h5><p>级联删除就是，在存在关联关系的数据表之间，删除主表记录的时候，自动删除从表中关联的记录。但是在实际项目中，我们可能不想使用这种级联删除功能，就算需要删除从表的记录，也是更愿意通过代码来手动删除，以确保安全。禁用级联删除的代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">protected override void OnModelCreating(DbModelBuilder modelBuilder)</span><br><span class="line">&#123;</span><br><span class="line">    // 禁用一对多级联删除</span><br><span class="line">    modelBuilder.Conventions.Remove&lt;OneToManyCascadeDeleteConvention&gt;();</span><br><span class="line">    // 禁用多对多级联删除</span><br><span class="line">    modelBuilder.Conventions.Remove&lt;ManyToManyCascadeDeleteConvention&gt;();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="禁用默认表名复数形式"><a href="#禁用默认表名复数形式" class="headerlink" title="禁用默认表名复数形式"></a>禁用默认表名复数形式</h5><p>Entity Framework Code First 在根据类名生成数据表时，生成的数据表的表名，默认是类名的复数形式，可以通过代码禁用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">protected override void OnModelCreating(DbModelBuilder modelBuilder)</span><br><span class="line">&#123;</span><br><span class="line">    // 禁用默认表名复数形式</span><br><span class="line">    modelBuilder.Conventions.Remove&lt;PluralizingTableNameConvention&gt;();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当然还有其他相关的一些设置项，不一一列举。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/NET/" rel="tag"># .NET</a>
+          
+            <a href="/tags/Entity-Framwork/" rel="tag"># Entity Framwork</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/20/travel-in-zhoushan/" rel="next" title="舟山行">
+                <i class="fa fa-chevron-left"></i> 舟山行
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar_smile.png"
+                alt="废菜" />
+            
+              <p class="site-author-name" itemprop="name">废菜</p>
+              <p class="site-description motion-element" itemprop="description">别看了，都是我瞎写的。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/realchoi" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://twitter.com/poorcai" target="_blank" title="Twitter">
+                    
+                      <i class="fa fa-fw fa-twitter"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:meetcds@gmail.com" target="_blank" title="Email">
+                    
+                      <i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              </a>
+            </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-globe"></i>
+                Link
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://loading.life" title="Life's Loading" target="_blank">Life's Loading</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Entity-Framework-在-Code-First-模式下与数据库的连接"><span class="nav-text">Entity Framework 在 Code First 模式下与数据库的连接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Entity-Framework-数据库连接配置"><span class="nav-text">Entity Framework 数据库连接配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Entity-Framework-DbContext-连接数据库"><span class="nav-text">Entity Framework DbContext 连接数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DBContext-数据库初始化方式"><span class="nav-text">DBContext 数据库初始化方式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#CreateDatabaseIfNotExist"><span class="nav-text">CreateDatabaseIfNotExist</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#DropCreateDatabaseWhenModelChanges"><span class="nav-text">DropCreateDatabaseWhenModelChanges</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#DropCreateDatabaseAlways"><span class="nav-text">DropCreateDatabaseAlways</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DbContext-连接数据库的一些设置"><span class="nav-text">DbContext 连接数据库的一些设置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#禁用延迟加载"><span class="nav-text">禁用延迟加载</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#禁用关系数据的级联删除"><span class="nav-text">禁用关系数据的级联删除</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#禁用默认表名复数形式"><span class="nav-text">禁用默认表名复数形式</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">废菜</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://blog.realchoi.com/2018/08/01/notes-of-learning-entity-framework/';
+          this.page.identifier = '2018/08/01/notes-of-learning-entity-framework/';
+          this.page.title = 'Entity Framework 学习笔记';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://realchoi.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("IHxxoOk7CsDPL4UUpYmsfGev-gzGzoHsz", "CWxeEEIDg3RmH42zN9jzBYu8");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
