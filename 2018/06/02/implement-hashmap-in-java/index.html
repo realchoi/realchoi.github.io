@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Courgette:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/code.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/code.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="数据结构,HashMap,Java," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="HashMap 基本介绍HashMap 是 Map 接口中最为常用的一个实现类，通过名字我们可以看出，它与 hash 算法密不可分。它的内部用来存放键值对。HashMap 的底层实现是数组和链表 / 红黑树。 简单解释一下它的原理来加深自己的印象：HashMap 主要维护了一个数组，数组中存放的是 Entry 对象，该对象包含了 key（键）、value（值）、hashcode（key.hashC">
+<meta name="keywords" content="数据结构,HashMap,Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Java 实现 HashMap">
+<meta property="og:url" content="https://blog.realchoi.com/2018/06/02/implement-hashmap-in-java/index.html">
+<meta property="og:site_name" content="Choi&#39;s Notes">
+<meta property="og:description" content="HashMap 基本介绍HashMap 是 Map 接口中最为常用的一个实现类，通过名字我们可以看出，它与 hash 算法密不可分。它的内部用来存放键值对。HashMap 的底层实现是数组和链表 / 红黑树。 简单解释一下它的原理来加深自己的印象：HashMap 主要维护了一个数组，数组中存放的是 Entry 对象，该对象包含了 key（键）、value（值）、hashcode（key.hashC">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2018/12/09/5c0cf9743157a.jpg">
+<meta property="og:updated_time" content="2018-12-09T12:05:09.516Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用 Java 实现 HashMap">
+<meta name="twitter:description" content="HashMap 基本介绍HashMap 是 Map 接口中最为常用的一个实现类，通过名字我们可以看出，它与 hash 算法密不可分。它的内部用来存放键值对。HashMap 的底层实现是数组和链表 / 红黑树。 简单解释一下它的原理来加深自己的印象：HashMap 主要维护了一个数组，数组中存放的是 Entry 对象，该对象包含了 key（键）、value（值）、hashcode（key.hashC">
+<meta name="twitter:image" content="https://i.loli.net/2018/12/09/5c0cf9743157a.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://blog.realchoi.com/2018/06/02/implement-hashmap-in-java/"/>
+
+
+
+
+
+  <title>使用 Java 实现 HashMap | Choi's Notes</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Choi's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.realchoi.com/2018/06/02/implement-hashmap-in-java/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="废菜">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar_smile.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Choi's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">使用 Java 实现 HashMap</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-02T08:00:00+08:00">
+                2018-06-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="HashMap-基本介绍"><a href="#HashMap-基本介绍" class="headerlink" title="HashMap 基本介绍"></a>HashMap 基本介绍</h2><p>HashMap 是 Map 接口中最为常用的一个实现类，通过名字我们可以看出，它与 hash 算法密不可分。它的内部用来存放键值对。HashMap 的底层实现是数组和链表 / 红黑树。</p>
+<p>简单解释一下它的原理来加深自己的印象：HashMap 主要维护了一个数组，数组中存放的是 Entry 对象，该对象包含了 key（键）、value（值）、hashcode（<code>key.hashCode()</code> 返回的值） 以及 next（下一个 Entry 对象），我们的键 / 值对就是存放在一个个的 Entry 对象中。但是如果仅仅是这样，就与普通数组没什么区别了，插入和删除的效率都很低。为了提高效率，HashMap 还引入了链表。下面直接上一张图吧，画功不好，简单嘲笑一下后就接着往下看吧🙃。</p>
+<p><img src="https://i.loli.net/2018/12/09/5c0cf9743157a.jpg" alt="hashmap.jpg"></p>
+<a id="more"></a>
+<p>当我们把一个键值对存进 HashMap 时，它首先会对键的 <code>hashCode()</code> 进行重新计算，然后调用 <code>indexFor()</code> 方法计算出 table 数组的索引，最后将键值对存放在数组在该索引下的 Entry 对象中。但是，两个不同的键 A 和 B，它们计算出来的索引值有可能是相等的，这样一来就会产生“碰撞”，我们总不能在一个 Entry 对象中存储两个键值对。为了解决碰撞问题，链表的作用就显示出来了 —— 假设 A 和 B 经过计算后得到的索引都是 0，且 A 所在的 Entry 对象已经存在于数组的第一个位置，当 B 所在的 Entry 对象也准备来第一个位置的时候，它会自动链接到 A 所在 Entry 对象的 <code>next</code> 属性上，后续不管 C 还是 D，只要它们的 hashcode 相等，都依次往后链接，这就形成了一个链表。仔细一看，<strong>HashMap 维护的数组，里面的成员其实就是链表，链表上存放的才是包含键值对的 Entry 对象。</strong></p>
+<p>同理，当我们从 HashMap 中取数据时，会先对传进来的键进行计算得到数组的索引，然后对该索引下的链表进行遍历，如果链表中某个节点的键与传进来的键相等（调用 <code>equals()</code> 方法返回 <code>true</code>），就返回该节点的值。</p>
+<p>对了，在 Java 8 当中，链表还有可能是红黑树。事情是这样的，如果一个 HashMap 中的键值对特别多，那么链表中的节点数量就也变得很多，这样一来遍历链表的效率就会大大降低，从而查询效率就降低了，所以为了提高效率，Java 1.8 中进入了红黑树。但并不是没有链表了，只有当一个链表的节点数量大于 8 的时候，才会将该链表转换为红黑树。另外， Java 7 当中的头插法，在 Java 8 中也被改成了尾插法。</p>
+<p>HashMap 内部其实还很深，很多东西上面都没提到，或者没有细说。像初始容量（InitialCapacity）、加载因子（loadFactor），影响着 HashMap 的自动扩容等；<code>indexFor()</code> 具体是怎么计算键值对存放的数组索引、从而避免碰撞的；链表是如何转换为红黑树的，等等……后续还需要加深阅读及学习。</p>
+<h2 id="HashMap-的实现"><a href="#HashMap-的实现" class="headerlink" title="HashMap 的实现"></a>HashMap 的实现</h2><p>今天简单实现了一下 HashMap，说简单，那是真的简单，感觉快与官方 HashMap 不搭边了😂。代码如下，仅仅是学习 HashMap 过程的笔记，不代表 HashMap 的真正原理……</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.realchoi.collection;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 自己简单实现 HashMap。</span></span><br><span class="line"><span class="comment"> * Hashmap 底层实现：数组 + 链表</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyHashMap</span> </span>&#123;</span><br><span class="line">    <span class="comment">// HashMap 中维护的链表数组（此处暂时将数组大小定为 999）</span></span><br><span class="line">    <span class="comment">// 这里直接使用 Java 自带的 LinkedList</span></span><br><span class="line">    <span class="keyword">private</span> LinkedList[] linkedList = <span class="keyword">new</span> LinkedList[<span class="number">999</span>];</span><br><span class="line">    <span class="comment">// 键值对的个数</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> size;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 往 HashMap 中添加键值对</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> key   键</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> value 值</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">put</span><span class="params">(Object key, Object value)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 初始化为一个键值对对象</span></span><br><span class="line">        MyEntry entry = <span class="keyword">new</span> MyEntry(key, value);</span><br><span class="line">        <span class="comment">// 先根据 key 的 hashcode 找到链表数组的索引，hashcode 可能为负数，转为正数</span></span><br><span class="line">        <span class="keyword">int</span> index = key.hashCode() &lt; <span class="number">0</span> ? -key.hashCode() % linkedList.length : key.hashCode() % linkedList.length;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 判断当前索引有没有数据，如果没有数据，则新建一个链表存放在该索引下，当前键值对是当前链表的第一个</span></span><br><span class="line">        <span class="keyword">if</span> (linkedList[index] == <span class="keyword">null</span>) &#123;</span><br><span class="line">            LinkedList temp = <span class="keyword">new</span> LinkedList();</span><br><span class="line">            temp.add(entry);</span><br><span class="line">            linkedList[index] = temp;</span><br><span class="line">            size++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 如果当前索引下已经有链表了，将新的键值对添加到该链表的尾部</span></span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 添加之前还需要遍历链表，判断当前 key 是否已经存在，如果存在，则将原 value 覆盖（因为 HashMap 不允许键重复）</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; linkedList[index].size(); i++) &#123;</span><br><span class="line">                MyEntry e = (MyEntry) linkedList[index].get(i);</span><br><span class="line">                <span class="keyword">if</span> (e.key.equals(key)) &#123;</span><br><span class="line">                    e.value = value;</span><br><span class="line">                    <span class="keyword">return</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            linkedList[index].add(entry);</span><br><span class="line">            size++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 通过键获取值对象</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> key 键</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 值对象</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">get</span><span class="params">(Object key)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 首先根据 key 的 hashcode 得到键值对所在链表的索引</span></span><br><span class="line">        <span class="keyword">int</span> index = key.hashCode() &lt; <span class="number">0</span> ? -key.hashCode() % linkedList.length : key.hashCode() % linkedList.length;</span><br><span class="line">        <span class="comment">// 然后根据索引找到所在的链表</span></span><br><span class="line">        LinkedList list = linkedList[index];</span><br><span class="line">        <span class="comment">// 遍历链表，得到值对象</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; list.size(); i++) &#123;</span><br><span class="line">            MyEntry e = (MyEntry) list.get(i);</span><br><span class="line">            <span class="keyword">if</span> (e.key.equals(key)) &#123;</span><br><span class="line">                <span class="keyword">return</span> e.value;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * HashMap 中键值对的个数</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> size;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 键值对</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyEntry</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 键和值</span></span><br><span class="line">    <span class="keyword">public</span> Object key;</span><br><span class="line">    <span class="keyword">public</span> Object value;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 构造方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyEntry</span><span class="params">(Object key, Object value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.key = key;</span><br><span class="line">        <span class="keyword">this</span>.value = value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>1、<a href="https://www.cnblogs.com/wang-meng/p/7545725.html" target="_blank" rel="noopener">Java 中常见数据结构 Map 之 HashMap</a></p>
+<p>2、<a href="https://mp.weixin.qq.com/s/10UM-E4MhgEZ0ZEjg2hq0A" target="_blank" rel="noopener">HashMap 之元素插入</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
+          
+            <a href="/tags/HashMap/" rel="tag"># HashMap</a>
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/02/implement-arraylist-in-java/" rel="next" title="使用 Java 实现 ArrayList">
+                <i class="fa fa-chevron-left"></i> 使用 Java 实现 ArrayList
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/01/notes-of-learning-entity-framework/" rel="prev" title="Entity Framework 学习笔记">
+                Entity Framework 学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar_smile.png"
+                alt="废菜" />
+            
+              <p class="site-author-name" itemprop="name">废菜</p>
+              <p class="site-description motion-element" itemprop="description">别看了，都是我瞎写的。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/realchoi" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://twitter.com/poorcai" target="_blank" title="Twitter">
+                    
+                      <i class="fa fa-fw fa-twitter"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:meetcds@gmail.com" target="_blank" title="Email">
+                    
+                      <i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              </a>
+            </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-globe"></i>
+                Link
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://loading.life" title="Life's Loading" target="_blank">Life's Loading</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap-基本介绍"><span class="nav-text">HashMap 基本介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap-的实现"><span class="nav-text">HashMap 的实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">废菜</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://blog.realchoi.com/2018/06/02/implement-hashmap-in-java/';
+          this.page.identifier = '2018/06/02/implement-hashmap-in-java/';
+          this.page.title = '使用 Java 实现 HashMap';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://realchoi.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
