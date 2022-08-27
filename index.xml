@@ -12,12 +12,21 @@
     <language>zh</language>
     <lastBuildDate>Fri, 26 Aug 2022 20:56:34 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>关于我</title>
+      <title>🐼关于我</title>
       <link>https://smc.im/about/</link>
       <pubDate>Sun, 02 Feb 2020 16:23:32 +0800</pubDate>
       
       <guid>https://smc.im/about/</guid>
       <description>概述 .Net Core 平台开发者，自媒体业余玩家，爱好剪辑音乐视频。 曾在两周内实现微信视频号从 0 粉涨到 2.1W 粉；播放量也从 0 涨到 3000W；点赞量超过 20W。</description>
+    </item>
+    
+    <item>
+      <title>👫友链</title>
+      <link>https://smc.im/friend/</link>
+      <pubDate>Sat, 27 Aug 2022 14:24:32 +0800</pubDate>
+      
+      <guid>https://smc.im/friend/</guid>
+      <description>Sulv&amp;#39;s Blog 一个记录技术、阅读、生活的博客 🤖如想交换友链，可以点此联系我~</description>
     </item>
     
     <item>
