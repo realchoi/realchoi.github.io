@@ -4,12 +4,8 @@
     <title>Visual Studio on Choi&#39;s Notes</title>
     <link>https://smc.im/tags/visual-studio/</link>
     <description>Recent content in Visual Studio on Choi&#39;s Notes</description>
-    <image>
-      <url>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
+    <language>zh-cn</language>
     <lastBuildDate>Sat, 06 May 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://smc.im/tags/visual-studio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>OpenCV 的安装与 Visual Studio 环境的配置</title>

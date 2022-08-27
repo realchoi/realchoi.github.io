@@ -4,12 +4,8 @@
     <title>博客 on Choi&#39;s Notes</title>
     <link>https://smc.im/tags/%E5%8D%9A%E5%AE%A2/</link>
     <description>Recent content in 博客 on Choi&#39;s Notes</description>
-    <image>
-      <url>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
+    <language>zh-cn</language>
     <lastBuildDate>Fri, 26 Aug 2022 00:04:05 +0800</lastBuildDate><atom:link href="https://smc.im/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>解决 hugo 中关于 integrity 的错误</title>

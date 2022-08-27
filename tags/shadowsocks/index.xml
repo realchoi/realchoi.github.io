@@ -4,12 +4,8 @@
     <title>Shadowsocks on Choi&#39;s Notes</title>
     <link>https://smc.im/tags/shadowsocks/</link>
     <description>Recent content in Shadowsocks on Choi&#39;s Notes</description>
-    <image>
-      <url>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
+    <language>zh-cn</language>
     <lastBuildDate>Fri, 02 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://smc.im/tags/shadowsocks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Shadowsocks 一键安装脚本（四合一）</title>

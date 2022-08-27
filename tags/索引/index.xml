@@ -4,12 +4,8 @@
     <title>索引 on Choi&#39;s Notes</title>
     <link>https://smc.im/tags/%E7%B4%A2%E5%BC%95/</link>
     <description>Recent content in 索引 on Choi&#39;s Notes</description>
-    <image>
-      <url>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
+    <language>zh-cn</language>
     <lastBuildDate>Fri, 26 Aug 2022 20:56:34 +0800</lastBuildDate><atom:link href="https://smc.im/tags/%E7%B4%A2%E5%BC%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何在 PostgreSQL 中查询作为索引的字段</title>

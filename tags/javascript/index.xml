@@ -4,12 +4,8 @@
     <title>JavaScript on Choi&#39;s Notes</title>
     <link>https://smc.im/tags/javascript/</link>
     <description>Recent content in JavaScript on Choi&#39;s Notes</description>
-    <image>
-      <url>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
+    <language>zh-cn</language>
     <lastBuildDate>Thu, 06 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://smc.im/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 JavaScript 下载文件</title>

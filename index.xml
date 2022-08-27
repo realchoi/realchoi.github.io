@@ -4,12 +4,8 @@
     <title>Choi&#39;s Notes</title>
     <link>https://smc.im/</link>
     <description>Recent content on Choi&#39;s Notes</description>
-    <image>
-      <url>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
+    <language>zh-cn</language>
     <lastBuildDate>Fri, 26 Aug 2022 20:56:34 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🐼关于我</title>
@@ -219,14 +215,6 @@
       <description>记录生活，记录工作</description>
     </item>
     
-    <item>
-      <title>搜索</title>
-      <link>https://smc.im/search/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://smc.im/search/</guid>
-      <description>搜索页面</description>
-    </item>
     
   </channel>
 </rss>
