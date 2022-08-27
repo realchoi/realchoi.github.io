@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>OpenCV on Choi&#39;s Notes</title>
+    <link>https://smc.im/tags/opencv/</link>
+    <description>Recent content in OpenCV on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 06 May 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://smc.im/tags/opencv/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenCV 的安装与 Visual Studio 环境的配置</title>
+      <link>https://smc.im/post/opencv-installation-visualstudio-configuration/</link>
+      <pubDate>Sat, 06 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://smc.im/post/opencv-installation-visualstudio-configuration/</guid>
+      <description>前言 大学四年很快就结束了，前面玩了三年六个月，最后六个月，怎么说也得学点点点点点东西吧&amp;hellip; 额，我说的就是毕业设计（笑）。 很幸运，</description>
+    </item>
+    
+  </channel>
+</rss>

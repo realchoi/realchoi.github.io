@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on Choi&#39;s Notes</title>
+    <link>https://smc.im/categories/</link>
+    <description>Recent content in Categories on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 26 Aug 2022 20:56:34 +0800</lastBuildDate><atom:link href="https://smc.im/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>技术</title>
+      <link>https://smc.im/categories/%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Fri, 26 Aug 2022 20:56:34 +0800</pubDate>
+      
+      <guid>https://smc.im/categories/%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>工作</title>
+      <link>https://smc.im/categories/%E5%B7%A5%E4%BD%9C/</link>
+      <pubDate>Mon, 22 Aug 2022 20:45:05 +0800</pubDate>
+      
+      <guid>https://smc.im/categories/%E5%B7%A5%E4%BD%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>生活</title>
+      <link>https://smc.im/categories/%E7%94%9F%E6%B4%BB/</link>
+      <pubDate>Sun, 21 Aug 2022 17:25:03 +0800</pubDate>
+      
+      <guid>https://smc.im/categories/%E7%94%9F%E6%B4%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>旅行</title>
+      <link>https://smc.im/categories/%E6%97%85%E8%A1%8C/</link>
+      <pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://smc.im/categories/%E6%97%85%E8%A1%8C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>博客</title>
+      <link>https://smc.im/categories/%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://smc.im/categories/%E5%8D%9A%E5%AE%A2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

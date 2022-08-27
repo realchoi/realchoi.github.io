@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Shadowsocks on Choi&#39;s Notes</title>
+    <link>https://smc.im/tags/shadowsocks/</link>
+    <description>Recent content in Shadowsocks on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 02 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://smc.im/tags/shadowsocks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shadowsocks 一键安装脚本（四合一）</title>
+      <link>https://smc.im/post/shadowsocks-installation-scripts/</link>
+      <pubDate>Fri, 02 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://smc.im/post/shadowsocks-installation-scripts/</guid>
+      <description>前言 不说你也懂，还是不说了。 本脚本适用环境 系统支持：CentOS 6+，Debian 7+，Ubuntu 12+ 内存要求：≥128M 日期：2017 年 5</description>
+    </item>
+    
+  </channel>
+</rss>

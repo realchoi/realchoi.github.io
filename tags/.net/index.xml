@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>.NET on Choi&#39;s Notes</title>
+    <link>https://smc.im/tags/.net/</link>
+    <description>Recent content in .NET on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 01 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://smc.im/tags/.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Entity Framework 学习笔记</title>
+      <link>https://smc.im/post/notes-of-learning-entity-framework/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://smc.im/post/notes-of-learning-entity-framework/</guid>
+      <description>前言 做 .NET 项目时需要用到微软自家的 ORM 框架 Entity Framework，由于之前学识比较浅，没有接触过 Entity Framework，趁着这个机会，赶紧 Google 了一下相</description>
+    </item>
+    
+  </channel>
+</rss>

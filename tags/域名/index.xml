@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>域名 on Choi&#39;s Notes</title>
+    <link>https://smc.im/tags/%E5%9F%9F%E5%90%8D/</link>
+    <description>Recent content in 域名 on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 29 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://smc.im/tags/%E5%9F%9F%E5%90%8D/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>利用 Cloudflare 进行免费的域名转发</title>
+      <link>https://smc.im/post/cloudflare-for-free-domain-forwarding/</link>
+      <pubDate>Wed, 29 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://smc.im/post/cloudflare-for-free-domain-forwarding/</guid>
+      <description>前言 人人都能接触互联网的时代，估计你手上也有闲置的域名，为了不浪费，可以用来干一些其他的小事情，比如将自己的域名跳转到微博或者 QQ 空间等等。这</description>
+    </item>
+    
+  </channel>
+</rss>

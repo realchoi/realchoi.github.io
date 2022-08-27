@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ArrayList on Choi&#39;s Notes</title>
+    <link>https://smc.im/tags/arraylist/</link>
+    <description>Recent content in ArrayList on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 02 May 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://smc.im/tags/arraylist/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Java 实现 ArrayList</title>
+      <link>https://smc.im/post/implement-arraylist-in-java/</link>
+      <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://smc.im/post/implement-arraylist-in-java/</guid>
+      <description>ArrayList 基本介绍 ArrayList 是 List 接口中最为常用的一个实现类，从名字可以看出，它与数组有着千丝万缕的关系。实际上，ArrayList 就是在底层维护了一个数组，</description>
+    </item>
+    
+  </channel>
+</rss>

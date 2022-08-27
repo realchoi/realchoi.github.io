@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Web on Choi&#39;s Notes</title>
+    <link>https://smc.im/tags/web/</link>
+    <description>Recent content in Web on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 06 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://smc.im/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 JavaScript 下载文件</title>
+      <link>https://smc.im/post/download-file-using-javascript/</link>
+      <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://smc.im/post/download-file-using-javascript/</guid>
+      <description>&lt;p&gt;项目上遇到 Excel 导出的功能，应该是个烂大街的需求了，但是自己水平有限，还是捣鼓了一段时间。后端实现都容易，最大的坑反而是文件下载。这里记录一下方便回忆。&lt;/p&gt;
+&lt;p&gt;大家都知道，下载文件最简单的办法，可能就是在前台添加一个 &lt;code&gt;a&lt;/code&gt; 标签，然后给其写上 &lt;code&gt;href&lt;/code&gt; 属性，指向文件的路径即可，但是个人觉得这种方式体验不太友好。于是我就选择使用 &lt;code&gt;ajax&lt;/code&gt; 请求后台接口来下载，这个时候问题来了 —— 这种方法无法触发浏览器打开保存文件的对话框，所以就没法下载文件。关键是后台方法全部走完，没有异常和报错，前台也平静如水，心里一百个纳闷。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>hugo on Choi&#39;s Notes</title>
+    <link>https://smc.im/tags/hugo/</link>
+    <description>Recent content in hugo on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 26 Aug 2022 00:04:05 +0800</lastBuildDate><atom:link href="https://smc.im/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解决 hugo 中关于 integrity 的错误</title>
+      <link>https://smc.im/post/resolve-integrity-error-in-hugo/</link>
+      <pubDate>Fri, 26 Aug 2022 00:04:05 +0800</pubDate>
+      
+      <guid>https://smc.im/post/resolve-integrity-error-in-hugo/</guid>
+      <description>错误描述 在 Github Pages 上部署 Hugo 博客后，网站样式丢失，打开浏览器 F12 控制台可以发现错误：Failed to find a valid digest in the &#39;integrity&#39; attribute for resource &amp;quot;xxx.css&amp;quot;, The resource has been blocked.。 解</description>
+    </item>
+    
+    <item>
+      <title>我的第一篇 hugo 博客</title>
+      <link>https://smc.im/post/first-hugo-post/</link>
+      <pubDate>Sat, 28 May 2022 09:14:49 +0800</pubDate>
+      
+      <guid>https://smc.im/post/first-hugo-post/</guid>
+      <description>这是我第一次使用 hugo 搭建博客，这也是我第一个 hugo 博客的第一篇文章。 前两天，我刚装了人生第一台台式机，配置如下： 配置 参数 价格 处理器 AMD R5-5600 原盒 / 主板 微</description>
+    </item>
+    
+  </channel>
+</rss>

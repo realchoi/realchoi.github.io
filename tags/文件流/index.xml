@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>文件流 on Choi&#39;s Notes</title>
+    <link>https://smc.im/tags/%E6%96%87%E4%BB%B6%E6%B5%81/</link>
+    <description>Recent content in 文件流 on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 22 Aug 2022 20:45:05 +0800</lastBuildDate><atom:link href="https://smc.im/tags/%E6%96%87%E4%BB%B6%E6%B5%81/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 .net core 中实现下载文件的接口</title>
+      <link>https://smc.im/post/a-download-file-api-in-aspnetcore/</link>
+      <pubDate>Mon, 22 Aug 2022 20:45:05 +0800</pubDate>
+      
+      <guid>https://smc.im/post/a-download-file-api-in-aspnetcore/</guid>
+      <description>缘起 今天写个下载文件的接口，可能对很多人来说很简单，但是我却遇到了这样那样的错误，这里记录一下。 Controller 层的返回类型 在 Asp.net core（现在叫 .NET 6）中，</description>
+    </item>
+    
+  </channel>
+</rss>

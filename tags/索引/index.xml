@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>索引 on Choi&#39;s Notes</title>
+    <link>https://smc.im/tags/%E7%B4%A2%E5%BC%95/</link>
+    <description>Recent content in 索引 on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://smc.im/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 26 Aug 2022 20:56:34 +0800</lastBuildDate><atom:link href="https://smc.im/tags/%E7%B4%A2%E5%BC%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何在 PostgreSQL 中查询作为索引的字段</title>
+      <link>https://smc.im/post/how-to-query-the-fields-used-as-indexes/</link>
+      <pubDate>Fri, 26 Aug 2022 20:56:34 +0800</pubDate>
+      
+      <guid>https://smc.im/post/how-to-query-the-fields-used-as-indexes/</guid>
+      <description>需求 公司业务上有一个需求，在页面上选择两张表中的各一个字段，将二者建立业务上的外键关系，前提是需要两者都是索引字段，否则会影响后续的查询效率</description>
+    </item>
+    
+  </channel>
+</rss>
