@@ -14,9 +14,6 @@
     <loc>https://smc.im/tags/.net-core/</loc>
     <lastmod>2022-10-09T19:57:12+08:00</lastmod>
   </url><url>
-    <loc>https://smc.im/tags/.webapi/</loc>
-    <lastmod>2022-10-09T19:57:12+08:00</lastmod>
-  </url><url>
     <loc>https://smc.im/post/read-request-data-multiple-times-in-dotnetcore-webapi/</loc>
     <lastmod>2022-10-09T19:57:12+08:00</lastmod>
   </url><url>
@@ -30,6 +27,9 @@
     <lastmod>2022-10-09T19:57:12+08:00</lastmod>
   </url><url>
     <loc>https://smc.im/tags/</loc>
+    <lastmod>2022-10-09T19:57:12+08:00</lastmod>
+  </url><url>
+    <loc>https://smc.im/tags/webapi/</loc>
     <lastmod>2022-10-09T19:57:12+08:00</lastmod>
   </url><url>
     <loc>https://smc.im/categories/%E6%8A%80%E6%9C%AF/</loc>
@@ -61,9 +61,6 @@
   </url><url>
     <loc>https://smc.im/post/resolve-integrity-error-in-hugo/</loc>
     <lastmod>2022-08-27T10:34:05+08:00</lastmod>
-  </url><url>
-    <loc>https://smc.im/tags/webapi/</loc>
-    <lastmod>2022-08-22T20:45:05+08:00</lastmod>
   </url><url>
     <loc>https://smc.im/post/a-download-file-api-in-aspnetcore/</loc>
     <lastmod>2022-08-22T20:45:05+08:00</lastmod>
