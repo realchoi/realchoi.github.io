@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Choi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 26 Aug 2022 20:56:34 +0800</lastBuildDate><atom:link href="https://smc.im/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Oct 2022 19:57:12 +0800</lastBuildDate><atom:link href="https://smc.im/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>.NET</title>
+      <link>https://smc.im/tags/.net/</link>
+      <pubDate>Sun, 09 Oct 2022 19:57:12 +0800</pubDate>
+      
+      <guid>https://smc.im/tags/.net/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>.NET Core</title>
+      <link>https://smc.im/tags/.net-core/</link>
+      <pubDate>Sun, 09 Oct 2022 19:57:12 +0800</pubDate>
+      
+      <guid>https://smc.im/tags/.net-core/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>.WebApi</title>
+      <link>https://smc.im/tags/.webapi/</link>
+      <pubDate>Sun, 09 Oct 2022 19:57:12 +0800</pubDate>
+      
+      <guid>https://smc.im/tags/.webapi/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Database</title>
       <link>https://smc.im/tags/database/</link>
@@ -67,15 +94,6 @@
       <pubDate>Fri, 26 Aug 2022 00:04:05 +0800</pubDate>
       
       <guid>https://smc.im/tags/%E5%8D%9A%E5%AE%A2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>.NET Core</title>
-      <link>https://smc.im/tags/.net-core/</link>
-      <pubDate>Mon, 22 Aug 2022 20:45:05 +0800</pubDate>
-      
-      <guid>https://smc.im/tags/.net-core/</guid>
       <description></description>
     </item>
     
@@ -193,15 +211,6 @@
       <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>https://smc.im/tags/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>.NET</title>
-      <link>https://smc.im/tags/.net/</link>
-      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://smc.im/tags/.net/</guid>
       <description></description>
     </item>
     

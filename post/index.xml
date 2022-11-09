@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Choi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 26 Aug 2022 20:56:34 +0800</lastBuildDate><atom:link href="https://smc.im/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Oct 2022 19:57:12 +0800</lastBuildDate><atom:link href="https://smc.im/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Asp.Net Core WebApi 中多次读取请求数据</title>
+      <link>https://smc.im/post/read-request-data-multiple-times-in-dotnetcore-webapi/</link>
+      <pubDate>Sun, 09 Oct 2022 19:57:12 +0800</pubDate>
+      
+      <guid>https://smc.im/post/read-request-data-multiple-times-in-dotnetcore-webapi/</guid>
+      <description>说明 有时候我们在处理接口的业务之前，可能需要对请求数据进行预处理，或者在业务处理之后再次统一处理请求数据，该场景常见于 AOP 编程，比如 .net core 中的 f</description>
+    </item>
+    
     <item>
       <title>如何在 PostgreSQL 中查询作为索引的字段</title>
       <link>https://smc.im/post/how-to-query-the-fields-used-as-indexes/</link>
