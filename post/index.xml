@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Choi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 09 Oct 2022 19:57:12 +0800</lastBuildDate><atom:link href="https://smc.im/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Nov 2022 20:13:15 +0800</lastBuildDate><atom:link href="https://smc.im/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Asp.Net Core WebApi 接口入参默认值</title>
+      <link>https://smc.im/post/default-value-of-parameters-in-dotnetcore-webapi/</link>
+      <pubDate>Wed, 09 Nov 2022 20:13:15 +0800</pubDate>
+      
+      <guid>https://smc.im/post/default-value-of-parameters-in-dotnetcore-webapi/</guid>
+      <description>说明 有时候我们在设计一个 api 的时候，希望能给它设置一个默认值，在调用方没有给该参数传值的时候使用该默认值，最常见的例子就是获取数据列表接口，有</description>
+    </item>
+    
     <item>
       <title>Asp.Net Core WebApi 中多次读取请求数据</title>
       <link>https://smc.im/post/read-request-data-multiple-times-in-dotnetcore-webapi/</link>
