@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>dotNET Core on Choi&#39;s Notes</title>
+    <link>https://smc.im/tags/dotnet-core/</link>
+    <description>Recent content in dotNET Core on Choi&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 15 Nov 2022 21:54:08 +0800</lastBuildDate><atom:link href="https://smc.im/tags/dotnet-core/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Asp.Net Core WebApi 中全局捕获异常</title>
+      <link>https://smc.im/post/catching-exceptions-globally-in-dotnetcore-webapi/</link>
+      <pubDate>Tue, 15 Nov 2022 21:54:08 +0800</pubDate>
+      
+      <guid>https://smc.im/post/catching-exceptions-globally-in-dotnetcore-webapi/</guid>
+      <description>为什么需要写日志 不管是写接口，还是写 MVC 程序，我们都必须对程序中的每个异常做记录，这样才能知道哪里发生了错误，以便更好地改进代码。拿 Asp.Net Core WebApi 接口</description>
+    </item>
+    
+  </channel>
+</rss>
