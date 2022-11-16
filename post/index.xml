@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Choi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 15 Nov 2022 21:54:08 +0800</lastBuildDate><atom:link href="https://smc.im/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Nov 2022 20:37:15 +0800</lastBuildDate><atom:link href="https://smc.im/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在小米手机上使用 Google Voice 时提示“加载对话时出错，请重试”</title>
+      <link>https://smc.im/post/google-voice-prompts-error-loading-conversation-on-xiaomi-phone/</link>
+      <pubDate>Wed, 16 Nov 2022 20:37:15 +0800</pubDate>
+      
+      <guid>https://smc.im/post/google-voice-prompts-error-loading-conversation-on-xiaomi-phone/</guid>
+      <description>由来 最近想注册一个 Google Voice 号码，网上搜索加上在群里咨询后，发现大家都说现在个人注册 GV 号很难放号了，索性今天花钱买了一个，人民币 45 元。用途就不说明</description>
+    </item>
+    
     <item>
       <title>在 Asp.Net Core WebApi 中全局捕获异常</title>
       <link>https://smc.im/post/catching-exceptions-globally-in-dotnetcore-webapi/</link>

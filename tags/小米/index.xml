@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>小米 on Choi&#39;s Notes</title>
+    <link>https://smc.im/tags/%E5%B0%8F%E7%B1%B3/</link>
+    <description>Recent content in 小米 on Choi&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 16 Nov 2022 20:37:15 +0800</lastBuildDate><atom:link href="https://smc.im/tags/%E5%B0%8F%E7%B1%B3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在小米手机上使用 Google Voice 时提示“加载对话时出错，请重试”</title>
+      <link>https://smc.im/post/google-voice-prompts-error-loading-conversation-on-xiaomi-phone/</link>
+      <pubDate>Wed, 16 Nov 2022 20:37:15 +0800</pubDate>
+      
+      <guid>https://smc.im/post/google-voice-prompts-error-loading-conversation-on-xiaomi-phone/</guid>
+      <description>由来 最近想注册一个 Google Voice 号码，网上搜索加上在群里咨询后，发现大家都说现在个人注册 GV 号很难放号了，索性今天花钱买了一个，人民币 45 元。用途就不说明</description>
+    </item>
+    
+  </channel>
+</rss>
