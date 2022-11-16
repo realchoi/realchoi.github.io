@@ -6,16 +6,7 @@
     <description>Recent content in 工作 on Choi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 22 Aug 2022 20:45:05 +0800</lastBuildDate><atom:link href="https://smc.im/categories/%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>在 .net core 中实现下载文件的接口</title>
-      <link>https://smc.im/post/a-download-file-api-in-aspnetcore/</link>
-      <pubDate>Mon, 22 Aug 2022 20:45:05 +0800</pubDate>
-      
-      <guid>https://smc.im/post/a-download-file-api-in-aspnetcore/</guid>
-      <description>缘起 今天写个下载文件的接口，可能对很多人来说很简单，但是我却遇到了这样那样的错误，这里记录一下。 Controller 层的返回类型 在 Asp.net core（现在叫 .NET 6）中，</description>
-    </item>
-    
+    <lastBuildDate>Thu, 02 Jun 2022 20:38:03 +0800</lastBuildDate><atom:link href="https://smc.im/categories/%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>从节日礼物窥探当前处境变化</title>
       <link>https://smc.im/post/a-glimpse-of-current-changes-in-the-situation-from-holiday-gifts/</link>
@@ -23,25 +14,6 @@
       
       <guid>https://smc.im/post/a-glimpse-of-current-changes-in-the-situation-from-holiday-gifts/</guid>
       <description>端午节快乐 明天就是端午节了，以前在老家的时候，爸妈已经去草地上割了一些艾草回来，插在门框上。现在自己住到了城里，不想丢到这个温馨的传统，就只</description>
-    </item>
-    
-    <item>
-      <title>使用 JavaScript 下载文件</title>
-      <link>https://smc.im/post/download-file-using-javascript/</link>
-      <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://smc.im/post/download-file-using-javascript/</guid>
-      <description>&lt;p&gt;项目上遇到 Excel 导出的功能，应该是个烂大街的需求了，但是自己水平有限，还是捣鼓了一段时间。后端实现都容易，最大的坑反而是文件下载。这里记录一下方便回忆。&lt;/p&gt;
-&lt;p&gt;大家都知道，下载文件最简单的办法，可能就是在前台添加一个 &lt;code&gt;a&lt;/code&gt; 标签，然后给其写上 &lt;code&gt;href&lt;/code&gt; 属性，指向文件的路径即可，但是个人觉得这种方式体验不太友好。于是我就选择使用 &lt;code&gt;ajax&lt;/code&gt; 请求后台接口来下载，这个时候问题来了 —— 这种方法无法触发浏览器打开保存文件的对话框，所以就没法下载文件。关键是后台方法全部走完，没有异常和报错，前台也平静如水，心里一百个纳闷。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Entity Framework 学习笔记</title>
-      <link>https://smc.im/post/notes-of-learning-entity-framework/</link>
-      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://smc.im/post/notes-of-learning-entity-framework/</guid>
-      <description>前言 做 .NET 项目时需要用到微软自家的 ORM 框架 Entity Framework，由于之前学识比较浅，没有接触过 Entity Framework，趁着这个机会，赶紧 Google 了一下相</description>
     </item>
     
     <item>
