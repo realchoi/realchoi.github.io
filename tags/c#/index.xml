@@ -6,7 +6,16 @@
     <description>Recent content in C# on Choi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 30 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://smc.im/tags/c#/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Jan 2023 15:13:57 +0800</lastBuildDate><atom:link href="https://smc.im/tags/c#/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GroupBy 方法和 ToLookup 方法之间的区别</title>
+      <link>https://smc.im/post/the-difference-between-method-groupby-and-tolookup/</link>
+      <pubDate>Tue, 31 Jan 2023 15:13:57 +0800</pubDate>
+      
+      <guid>https://smc.im/post/the-difference-between-method-groupby-and-tolookup/</guid>
+      <description>相同之处 C# 中的 GroupBy 方法，大家一般都知道是用来给数据集合做分组的，至于 ToLookup 方法，我本人用的比较少，估计很多人也不清楚是什么作用，其实它也可以对集合</description>
+    </item>
+    
     <item>
       <title>根据 IP 判断访问页面的用户是否来自内网</title>
       <link>https://smc.im/post/determine-whether-the-user-ip-is-from-the-intranet/</link>

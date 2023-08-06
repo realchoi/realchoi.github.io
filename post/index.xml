@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>GroupBy 方法和 ToLookup 方法之间的区别</title>
+      <link>https://smc.im/post/the-difference-between-method-groupby-and-tolookup/</link>
+      <pubDate>Tue, 31 Jan 2023 15:13:57 +0800</pubDate>
+      
+      <guid>https://smc.im/post/the-difference-between-method-groupby-and-tolookup/</guid>
+      <description>相同之处 C# 中的 GroupBy 方法，大家一般都知道是用来给数据集合做分组的，至于 ToLookup 方法，我本人用的比较少，估计很多人也不清楚是什么作用，其实它也可以对集合</description>
+    </item>
+    
+    <item>
       <title>在 .net 6 中重复读取请求参数 body</title>
       <link>https://smc.im/post/repeated-reading-of-request-parameter-body-in-dotnet6/</link>
       <pubDate>Tue, 06 Dec 2022 14:37:16 +0800</pubDate>
