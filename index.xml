@@ -6,7 +6,7 @@
     <description>Recent content on Choi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 06 Dec 2022 14:37:16 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Mar 2023 15:00:14 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🐼关于我</title>
       <link>https://smc.im/about/</link>
@@ -23,6 +23,15 @@
       
       <guid>https://smc.im/friend/</guid>
       <description>Sulv&amp;#39;s Blog 一个记录技术、阅读、生活的博客 🤖如想交换友链，可以点此联系我~</description>
+    </item>
+    
+    <item>
+      <title>使用 EF Core 查询数组参数与数据库中的数组字段是否有交集</title>
+      <link>https://smc.im/post/query-whether-array-parameter-intersect-with-array-field-in-the-database-in-ef-core/</link>
+      <pubDate>Sun, 12 Mar 2023 15:00:14 +0800</pubDate>
+      
+      <guid>https://smc.im/post/query-whether-array-parameter-intersect-with-array-field-in-the-database-in-ef-core/</guid>
+      <description>场景举例 表 student 中有一个数组类型的字段 hobbies，用来记录某个学生的所有业余爱好，此时想要查询业余爱好中包含羽毛球、篮球、吉他的所有学生，即</description>
     </item>
     
     <item>
