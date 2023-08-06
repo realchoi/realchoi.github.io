@@ -6,7 +6,16 @@
     <description>Recent content in 技术 on Choi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 15 Nov 2022 21:54:08 +0800</lastBuildDate><atom:link href="https://smc.im/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Dec 2022 14:37:16 +0800</lastBuildDate><atom:link href="https://smc.im/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 .net 6 中重复读取请求参数 body</title>
+      <link>https://smc.im/post/repeated-reading-of-request-parameter-body-in-dotnet6/</link>
+      <pubDate>Tue, 06 Dec 2022 14:37:16 +0800</pubDate>
+      
+      <guid>https://smc.im/post/repeated-reading-of-request-parameter-body-in-dotnet6/</guid>
+      <description>一句话总结 一般情况下，HttpContext.Request.Body 流对象不允许被重复读取，这是因为该流对象的 Position 是不允许进行修改操作的，一</description>
+    </item>
+    
     <item>
       <title>在 Asp.Net Core WebApi 中全局捕获异常</title>
       <link>https://smc.im/post/catching-exceptions-globally-in-dotnetcore-webapi/</link>

@@ -9,21 +9,33 @@
     <lastmod>2022-08-27T14:24:32+08:00</lastmod>
   </url><url>
     <loc>https://smc.im/categories/</loc>
-    <lastmod>2022-11-16T20:37:15+08:00</lastmod>
+    <lastmod>2022-12-06T14:37:16+08:00</lastmod>
   </url><url>
     <loc>https://smc.im/</loc>
-    <lastmod>2022-11-16T20:37:15+08:00</lastmod>
+    <lastmod>2022-12-06T14:37:16+08:00</lastmod>
+  </url><url>
+    <loc>https://smc.im/tags/dotnet-core/</loc>
+    <lastmod>2022-12-06T14:37:16+08:00</lastmod>
+  </url><url>
+    <loc>https://smc.im/post/</loc>
+    <lastmod>2022-12-06T14:37:16+08:00</lastmod>
+  </url><url>
+    <loc>https://smc.im/tags/</loc>
+    <lastmod>2022-12-06T14:37:16+08:00</lastmod>
+  </url><url>
+    <loc>https://smc.im/post/repeated-reading-of-request-parameter-body-in-dotnet6/</loc>
+    <lastmod>2022-12-06T14:37:16+08:00</lastmod>
+  </url><url>
+    <loc>https://smc.im/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2022-12-06T14:37:16+08:00</lastmod>
+  </url><url>
+    <loc>https://smc.im/tags/%E6%96%87%E4%BB%B6%E6%B5%81/</loc>
+    <lastmod>2022-12-06T14:37:16+08:00</lastmod>
   </url><url>
     <loc>https://smc.im/tags/google-voice/</loc>
     <lastmod>2022-11-16T20:37:15+08:00</lastmod>
   </url><url>
     <loc>https://smc.im/tags/gv/</loc>
-    <lastmod>2022-11-16T20:37:15+08:00</lastmod>
-  </url><url>
-    <loc>https://smc.im/post/</loc>
-    <lastmod>2022-11-16T20:37:15+08:00</lastmod>
-  </url><url>
-    <loc>https://smc.im/tags/</loc>
     <lastmod>2022-11-16T20:37:15+08:00</lastmod>
   </url><url>
     <loc>https://smc.im/post/google-voice-prompts-error-loading-conversation-on-xiaomi-phone/</loc>
@@ -38,16 +50,10 @@
     <loc>https://smc.im/tags/dotnet/</loc>
     <lastmod>2022-11-15T21:54:08+08:00</lastmod>
   </url><url>
-    <loc>https://smc.im/tags/dotnet-core/</loc>
-    <lastmod>2022-11-15T21:54:08+08:00</lastmod>
-  </url><url>
     <loc>https://smc.im/tags/webapi/</loc>
     <lastmod>2022-11-15T21:54:08+08:00</lastmod>
   </url><url>
     <loc>https://smc.im/post/catching-exceptions-globally-in-dotnetcore-webapi/</loc>
-    <lastmod>2022-11-15T21:54:08+08:00</lastmod>
-  </url><url>
-    <loc>https://smc.im/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2022-11-15T21:54:08+08:00</lastmod>
   </url><url>
     <loc>https://smc.im/post/default-value-of-parameters-in-dotnetcore-webapi/</loc>
@@ -84,9 +90,6 @@
     <lastmod>2022-08-27T10:34:05+08:00</lastmod>
   </url><url>
     <loc>https://smc.im/post/a-download-file-api-in-aspnetcore/</loc>
-    <lastmod>2022-08-22T20:45:05+08:00</lastmod>
-  </url><url>
-    <loc>https://smc.im/tags/%E6%96%87%E4%BB%B6%E6%B5%81/</loc>
     <lastmod>2022-08-22T20:45:05+08:00</lastmod>
   </url><url>
     <loc>https://smc.im/tags/%E5%91%A8%E6%9C%AB/</loc>
