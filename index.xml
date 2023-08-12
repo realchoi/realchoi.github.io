@@ -6,7 +6,7 @@
     <description>Recent content on Choi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 12 Mar 2023 15:00:14 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 May 2023 13:51:11 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🐼关于我</title>
       <link>https://smc.im/about/</link>
@@ -23,6 +23,15 @@
       
       <guid>https://smc.im/friend/</guid>
       <description>Sulv&amp;#39;s Blog 一个记录技术、阅读、生活的博客 🤖如想交换友链，可以点此联系我~</description>
+    </item>
+    
+    <item>
+      <title>根据 Iqueryable 对象得到其查询的 SQL 语句和参数</title>
+      <link>https://smc.im/post/get-the-sql-statement-and-parameters-according-to-the-iqueryable-object/</link>
+      <pubDate>Mon, 29 May 2023 13:51:11 +0800</pubDate>
+      
+      <guid>https://smc.im/post/get-the-sql-statement-and-parameters-according-to-the-iqueryable-object/</guid>
+      <description>在使用 Entity Framework 作为 ORM 的时候，我们可能会根据得到的某个 IQueryable 查询对象，来“翻译”其最终的执行 SQL 以及传入的参数。经过一番拼凑，我得到了以下的方法，在此记</description>
     </item>
     
     <item>
