@@ -6,7 +6,7 @@
     <description>Recent content on Choi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 09 Jun 2023 14:34:44 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Jul 2023 14:51:56 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🐼关于我</title>
       <link>https://smc.im/about/</link>
@@ -23,6 +23,15 @@
       
       <guid>https://smc.im/friend/</guid>
       <description>Sulv&amp;#39;s Blog 一个记录技术、阅读、生活的博客 🤖如想交换友链，可以点此联系我~</description>
+    </item>
+    
+    <item>
+      <title>git 中的 cherry-pick 命令的使用方法</title>
+      <link>https://smc.im/post/how-to-use-cherry-pick-command-in-git/</link>
+      <pubDate>Mon, 17 Jul 2023 14:51:56 +0800</pubDate>
+      
+      <guid>https://smc.im/post/how-to-use-cherry-pick-command-in-git/</guid>
+      <description>git cherry-pick 命令用于将一个或多个提交从一个分支复制到另一个分支。 假设现在有一个使用场景：我们只想要在一大堆提交中，将其中一个提交从某个分支复制到 master 分</description>
     </item>
     
     <item>

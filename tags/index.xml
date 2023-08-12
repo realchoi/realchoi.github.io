@@ -6,7 +6,16 @@
     <description>Recent content in Tags on Choi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 09 Jun 2023 14:34:44 +0800</lastBuildDate><atom:link href="https://smc.im/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Jul 2023 14:51:56 +0800</lastBuildDate><atom:link href="https://smc.im/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git</title>
+      <link>https://smc.im/tags/git/</link>
+      <pubDate>Mon, 17 Jul 2023 14:51:56 +0800</pubDate>
+      
+      <guid>https://smc.im/tags/git/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>C#</title>
       <link>https://smc.im/tags/c#/</link>

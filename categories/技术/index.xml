@@ -6,7 +6,16 @@
     <description>Recent content in 技术 on Choi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 09 Jun 2023 14:34:44 +0800</lastBuildDate><atom:link href="https://smc.im/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Jul 2023 14:51:56 +0800</lastBuildDate><atom:link href="https://smc.im/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git 中的 cherry-pick 命令的使用方法</title>
+      <link>https://smc.im/post/how-to-use-cherry-pick-command-in-git/</link>
+      <pubDate>Mon, 17 Jul 2023 14:51:56 +0800</pubDate>
+      
+      <guid>https://smc.im/post/how-to-use-cherry-pick-command-in-git/</guid>
+      <description>git cherry-pick 命令用于将一个或多个提交从一个分支复制到另一个分支。 假设现在有一个使用场景：我们只想要在一大堆提交中，将其中一个提交从某个分支复制到 master 分</description>
+    </item>
+    
     <item>
       <title>在 C# 中自定义动态对象比较器</title>
       <link>https://smc.im/post/custom-dynamic-object-comparator-in-csharp/</link>
