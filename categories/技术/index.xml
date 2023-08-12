@@ -6,9 +6,18 @@
     <description>Recent content in 技术 on Choi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 29 May 2023 13:51:11 +0800</lastBuildDate><atom:link href="https://smc.im/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Jun 2023 14:34:44 +0800</lastBuildDate><atom:link href="https://smc.im/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>根据 Iqueryable 对象得到其查询的 SQL 语句和参数</title>
+      <title>在 C# 中自定义动态对象比较器</title>
+      <link>https://smc.im/post/custom-dynamic-object-comparator-in-csharp/</link>
+      <pubDate>Fri, 09 Jun 2023 14:34:44 +0800</pubDate>
+      
+      <guid>https://smc.im/post/custom-dynamic-object-comparator-in-csharp/</guid>
+      <description>有时我们在对两个相同类型的对象进行比较、或对两个相同泛型的集合进行去重等操作时，需要对对象的某几个字段进行比较，而不是全部字段。这就需要用到</description>
+    </item>
+    
+    <item>
+      <title>根据 IQueryable 对象得到其查询的 SQL 语句和参数</title>
       <link>https://smc.im/post/get-the-sql-statement-and-parameters-according-to-the-iqueryable-object/</link>
       <pubDate>Mon, 29 May 2023 13:51:11 +0800</pubDate>
       
