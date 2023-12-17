@@ -6,7 +6,16 @@
     <description>Recent content in 博客 on Choi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 26 Aug 2022 00:04:05 +0800</lastBuildDate><atom:link href="https://smc.im/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Dec 2023 13:03:07 +0800</lastBuildDate><atom:link href="https://smc.im/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Github Actions 自动部署 hugo 博客</title>
+      <link>https://smc.im/post/deploy-hugo-blog-with-github-actions/</link>
+      <pubDate>Sun, 17 Dec 2023 13:03:07 +0800</pubDate>
+      
+      <guid>https://smc.im/post/deploy-hugo-blog-with-github-actions/</guid>
+      <description>hugo 博客系统，大部分人应该都在使用，但是部署的方式，也不相同。Github Actions 这么好用的工具已经出来好几年了，但是一直都没尝试过。本次就简单记录</description>
+    </item>
+    
     <item>
       <title>解决 hugo 中关于 integrity 的错误</title>
       <link>https://smc.im/post/resolve-integrity-error-in-hugo/</link>
