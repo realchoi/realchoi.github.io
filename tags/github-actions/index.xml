@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Github Actions on Choi&#39;s Notes</title>
+    <link>https://smc.im/tags/github-actions/</link>
+    <description>Recent content in Github Actions on Choi&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 17 Dec 2023 13:03:07 +0800</lastBuildDate><atom:link href="https://smc.im/tags/github-actions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Github Actions 自动部署 hugo 博客</title>
+      <link>https://smc.im/post/deploy-hugo-blog-with-github-actions/</link>
+      <pubDate>Sun, 17 Dec 2023 13:03:07 +0800</pubDate>
+      
+      <guid>https://smc.im/post/deploy-hugo-blog-with-github-actions/</guid>
+      <description>hugo 博客系统，大部分人应该都在使用。记录一下使用 Git Actions 自动部署 hugo 博客的方法。</description>
+    </item>
+    
+  </channel>
+</rss>
