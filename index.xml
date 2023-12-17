@@ -31,7 +31,7 @@
       <pubDate>Sun, 17 Dec 2023 13:03:07 +0800</pubDate>
       
       <guid>https://smc.im/post/deploy-hugo-blog-with-github-actions/</guid>
-      <description>hugo 博客系统，大部分人应该都在使用。记录一下使用 Git Actions 自动部署 hugo 博客的方法。</description>
+      <description>hugo 博客系统，大部分人应该都在使用，但是部署的方式，也不相同。Github Actions 这么好用的工具已经出来好几年了，但是一直都没尝试过。本次就简单记录</description>
     </item>
     
     <item>
