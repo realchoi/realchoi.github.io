@@ -6,7 +6,7 @@
     <description>Recent content on Choi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 17 Dec 2023 13:03:07 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Dec 2024 20:30:53 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🐼关于我</title>
       <link>https://smc.im/about/</link>
@@ -23,6 +23,15 @@
       
       <guid>https://smc.im/friend/</guid>
       <description>Sulv&amp;#39;s Blog 一个记录技术、阅读、生活的博客 Pseudoyu Pseudoyu 🤖如想交换友链，可以点此联系我~</description>
+    </item>
+    
+    <item>
+      <title>给台式机安装了黑苹果</title>
+      <link>https://smc.im/post/hackintosh-on-a-desktop-pc/</link>
+      <pubDate>Tue, 17 Dec 2024 20:30:53 +0800</pubDate>
+      
+      <guid>https://smc.im/post/hackintosh-on-a-desktop-pc/</guid>
+      <description>放图 起因 最近发布的新款 M4 版本的 Mac mini，掀起了一波 Mac 热，理由无他，就是性能强 + 价格低。 性能强，指的是这颗 M4 芯片性能强悍，配合上苹果公司终于</description>
     </item>
     
     <item>
