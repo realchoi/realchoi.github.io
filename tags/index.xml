@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Choi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 17 Dec 2024 20:30:53 +0800</lastBuildDate><atom:link href="https://smc.im/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Dec 2024 10:07:40 +0800</lastBuildDate><atom:link href="https://smc.im/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git</title>
+      <link>https://smc.im/tags/git/</link>
+      <pubDate>Thu, 19 Dec 2024 10:07:40 +0800</pubDate>
+      
+      <guid>https://smc.im/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GitHub</title>
+      <link>https://smc.im/tags/github/</link>
+      <pubDate>Thu, 19 Dec 2024 10:07:40 +0800</pubDate>
+      
+      <guid>https://smc.im/tags/github/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Hackintosh</title>
       <link>https://smc.im/tags/hackintosh/</link>
@@ -85,15 +103,6 @@
       <pubDate>Mon, 07 Aug 2023 15:10:12 +0800</pubDate>
       
       <guid>https://smc.im/tags/rider/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>git</title>
-      <link>https://smc.im/tags/git/</link>
-      <pubDate>Mon, 17 Jul 2023 14:51:56 +0800</pubDate>
-      
-      <guid>https://smc.im/tags/git/</guid>
       <description></description>
     </item>
     
