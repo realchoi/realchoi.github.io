@@ -6,7 +6,7 @@
     <description>Recent content on Choi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 19 Dec 2024 10:07:40 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Dec 2024 14:48:59 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🐼关于我</title>
       <link>https://smc.im/about/</link>
@@ -23,6 +23,15 @@
       
       <guid>https://smc.im/friend/</guid>
       <description>Sulv&amp;#39;s Blog 一个记录技术、阅读、生活的博客 Pseudoyu Pseudoyu 以上都是我的单链，哈哈哈😂因为我觉得他们的博客都比较好，放进来时长学习一下~ 🤖如想交换友链，可以发送邮</description>
+    </item>
+    
+    <item>
+      <title>git 如何忽略已经添加和提交的文件？</title>
+      <link>https://smc.im/post/how-to-ignore-files-added-and-commited-in-git/</link>
+      <pubDate>Fri, 20 Dec 2024 14:48:59 +0800</pubDate>
+      
+      <guid>https://smc.im/post/how-to-ignore-files-added-and-commited-in-git/</guid>
+      <description>提交完 git 仓库后，发现没有创建 `.gitignore` 文件，导致将所有文件都推送到了仓库，此时想要再通过创建 `.gitignore` 文件来忽略，会发现并不会直接生效。</description>
     </item>
     
     <item>

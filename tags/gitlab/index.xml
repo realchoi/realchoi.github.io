@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>GitHub on Choi&#39;s Notes</title>
-    <link>https://smc.im/tags/github/</link>
-    <description>Recent content in GitHub on Choi&#39;s Notes</description>
+    <title>gitlab on Choi&#39;s Notes</title>
+    <link>https://smc.im/tags/gitlab/</link>
+    <description>Recent content in gitlab on Choi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 20 Dec 2024 14:48:59 +0800</lastBuildDate><atom:link href="https://smc.im/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Dec 2024 14:48:59 +0800</lastBuildDate><atom:link href="https://smc.im/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>git 如何忽略已经添加和提交的文件？</title>
       <link>https://smc.im/post/how-to-ignore-files-added-and-commited-in-git/</link>
@@ -14,15 +14,6 @@
       
       <guid>https://smc.im/post/how-to-ignore-files-added-and-commited-in-git/</guid>
       <description>提交完 git 仓库后，发现没有创建 `.gitignore` 文件，导致将所有文件都推送到了仓库，此时想要再通过创建 `.gitignore` 文件来忽略，会发现并不会直接生效。</description>
-    </item>
-    
-    <item>
-      <title>如何给 github 设置代理？</title>
-      <link>https://smc.im/post/how-to-setup-proxy-for-github/</link>
-      <pubDate>Thu, 19 Dec 2024 10:07:40 +0800</pubDate>
-      
-      <guid>https://smc.im/post/how-to-setup-proxy-for-github/</guid>
-      <description>给 github 设置代理，以获得畅快的网络访问速度！</description>
     </item>
     
   </channel>
