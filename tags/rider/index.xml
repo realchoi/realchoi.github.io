@@ -13,7 +13,7 @@
       <pubDate>Mon, 07 Aug 2023 15:10:12 +0800</pubDate>
       
       <guid>https://smc.im/post/uninstall-has-not-detected-folder-of-jetbrains-rider-installation/</guid>
-      <description>今天在卸载 Rider 程序（运行 Uninstall.exe 程序）时，遇到找不到卸载程序的错误。 完整错误提示为：Uninstall hasn&#39;t detected folder of JetBrains Rider installation. Probably uninstall.exe was moved from the installation folder，看上</description>
+      <description>解决卸载 JetBrains 家的 IDE 软件（如 Rider）时，遇到的找不到卸载程序的错误。</description>
     </item>
     
   </channel>

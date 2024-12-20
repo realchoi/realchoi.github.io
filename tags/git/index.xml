@@ -8,12 +8,12 @@
     <language>zh-cn</language>
     <lastBuildDate>Thu, 19 Dec 2024 10:07:40 +0800</lastBuildDate><atom:link href="https://smc.im/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>如何给 git 设置代理？</title>
-      <link>https://smc.im/post/how-to-set-proxy-for-git/</link>
+      <title>如何给 github 设置代理？</title>
+      <link>https://smc.im/post/how-to-setup-proxy-for-github/</link>
       <pubDate>Thu, 19 Dec 2024 10:07:40 +0800</pubDate>
       
-      <guid>https://smc.im/post/how-to-set-proxy-for-git/</guid>
-      <description>背景 我们的电脑上，有时候需要连接多个 git 仓库，比如需要连接公司内部的 GitLab，以及连接自己使用的 GitHub。但是 GitHub 在国内访问速度比较慢，</description>
+      <guid>https://smc.im/post/how-to-setup-proxy-for-github/</guid>
+      <description>给 github 设置代理，以获得畅快的网络访问速度！</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Mon, 17 Jul 2023 14:51:56 +0800</pubDate>
       
       <guid>https://smc.im/post/how-to-use-cherry-pick-command-in-git/</guid>
-      <description>git cherry-pick 命令用于将一个或多个提交从一个分支复制到另一个分支。 假设现在有一个使用场景：我们只想要在一大堆提交中，将其中一个提交从某个分支复制到 master 分</description>
+      <description>总结一下 git cherry-pick（也被翻译为：优选提交）命令的使用。</description>
     </item>
     
   </channel>

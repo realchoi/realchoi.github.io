@@ -13,7 +13,7 @@
       <pubDate>Fri, 26 Aug 2022 00:04:05 +0800</pubDate>
       
       <guid>https://smc.im/post/resolve-integrity-error-in-hugo/</guid>
-      <description>错误描述 在 Github Pages 上部署 Hugo 博客后，网站样式丢失，打开浏览器 F12 控制台可以发现错误：Failed to find a valid digest in the &#39;integrity&#39; attribute for resource &amp;quot;xxx.css&amp;quot;, The resource has been blocked.。 解</description>
+      <description>解决 hugo 博客报错：Failed to find a valid digest in the &amp;#39;integrity&amp;#39; attribute for resource `xxx.css`, The resource has been blocked.</description>
     </item>
     
   </channel>

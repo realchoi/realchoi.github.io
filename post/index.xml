@@ -8,12 +8,12 @@
     <language>zh-cn</language>
     <lastBuildDate>Thu, 19 Dec 2024 10:07:40 +0800</lastBuildDate><atom:link href="https://smc.im/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>如何给 git 设置代理？</title>
-      <link>https://smc.im/post/how-to-set-proxy-for-git/</link>
+      <title>如何给 github 设置代理？</title>
+      <link>https://smc.im/post/how-to-setup-proxy-for-github/</link>
       <pubDate>Thu, 19 Dec 2024 10:07:40 +0800</pubDate>
       
-      <guid>https://smc.im/post/how-to-set-proxy-for-git/</guid>
-      <description>背景 我们的电脑上，有时候需要连接多个 git 仓库，比如需要连接公司内部的 GitLab，以及连接自己使用的 GitHub。但是 GitHub 在国内访问速度比较慢，</description>
+      <guid>https://smc.im/post/how-to-setup-proxy-for-github/</guid>
+      <description>给 github 设置代理，以获得畅快的网络访问速度！</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Tue, 17 Dec 2024 20:30:53 +0800</pubDate>
       
       <guid>https://smc.im/post/hackintosh-on-a-desktop-pc/</guid>
-      <description>黑苹果 hackintosh 安装教程</description>
+      <description>我的折腾：Intel i5 12400F 处理器、AMD RX 6600 显卡安装 macOS 15.2 黑苹果系统（hackintosh）的过程记录。</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Sun, 17 Dec 2023 13:03:07 +0800</pubDate>
       
       <guid>https://smc.im/post/deploy-hugo-blog-with-github-actions/</guid>
-      <description>hugo 博客系统，大部分人应该都在使用，但是部署的方式，也不相同。Github Actions 这么好用的工具已经出来好几年了，但是一直都没尝试过。本次就简单记录</description>
+      <description>使用 Github 自带的免费 CI 工具——Github Actions，实现网站的自动部署、文章的自动发布。</description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@
       <pubDate>Mon, 07 Aug 2023 15:10:12 +0800</pubDate>
       
       <guid>https://smc.im/post/uninstall-has-not-detected-folder-of-jetbrains-rider-installation/</guid>
-      <description>今天在卸载 Rider 程序（运行 Uninstall.exe 程序）时，遇到找不到卸载程序的错误。 完整错误提示为：Uninstall hasn&#39;t detected folder of JetBrains Rider installation. Probably uninstall.exe was moved from the installation folder，看上</description>
+      <description>解决卸载 JetBrains 家的 IDE 软件（如 Rider）时，遇到的找不到卸载程序的错误。</description>
     </item>
     
     <item>
@@ -49,7 +49,7 @@
       <pubDate>Mon, 17 Jul 2023 14:51:56 +0800</pubDate>
       
       <guid>https://smc.im/post/how-to-use-cherry-pick-command-in-git/</guid>
-      <description>git cherry-pick 命令用于将一个或多个提交从一个分支复制到另一个分支。 假设现在有一个使用场景：我们只想要在一大堆提交中，将其中一个提交从某个分支复制到 master 分</description>
+      <description>总结一下 git cherry-pick（也被翻译为：优选提交）命令的使用。</description>
     </item>
     
     <item>
@@ -58,7 +58,7 @@
       <pubDate>Fri, 09 Jun 2023 14:34:44 +0800</pubDate>
       
       <guid>https://smc.im/post/custom-dynamic-object-comparator-in-csharp/</guid>
-      <description>有时我们在对两个相同类型的对象进行比较、或对两个相同泛型的集合进行去重等操作时，需要对对象的某几个字段进行比较，而不是全部字段。这就需要用到</description>
+      <description>在 C# 中，当我们需要按照自己的方式，对两个对象进行比较时，需要自定义对象比较器。</description>
     </item>
     
     <item>
@@ -67,7 +67,7 @@
       <pubDate>Mon, 29 May 2023 13:51:11 +0800</pubDate>
       
       <guid>https://smc.im/post/get-the-sql-statement-and-parameters-according-to-the-iqueryable-object/</guid>
-      <description>在使用 Entity Framework 作为 ORM 的时候，我们可能会根据得到的某个 IQueryable 查询对象，来“翻译”其最终的执行 SQL 以及传入的参数。经过一番拼凑，我得到了以下的方法，在此记</description>
+      <description>使用 Entity Framework 查询数据库得到的 IQueryable 对象，怎么得到它实际查询的 SQL 语句？</description>
     </item>
     
     <item>
@@ -76,7 +76,7 @@
       <pubDate>Sun, 12 Mar 2023 15:00:14 +0800</pubDate>
       
       <guid>https://smc.im/post/query-whether-array-parameter-intersect-with-array-field-in-the-database-in-ef-core/</guid>
-      <description>场景举例 表 student 中有一个数组类型的字段 hobbies，用来记录某个学生的所有业余爱好，此时想要查询业余爱好中包含羽毛球、篮球、吉他的所有学生，即</description>
+      <description>使用 EF Core 查询数据库数组之间的交集。</description>
     </item>
     
     <item>
@@ -85,7 +85,7 @@
       <pubDate>Tue, 31 Jan 2023 15:13:57 +0800</pubDate>
       
       <guid>https://smc.im/post/the-difference-between-method-groupby-and-tolookup/</guid>
-      <description>相同之处 C# 中的 GroupBy 方法，大家一般都知道是用来给数据集合做分组的，至于 ToLookup 方法，我本人用的比较少，估计很多人也不清楚是什么作用，其实它也可以对集合</description>
+      <description>C# 中的两个典型的分组函数：GroupBy 和 ToLookup 之间的区别。</description>
     </item>
     
     <item>
@@ -130,7 +130,7 @@
       <pubDate>Sun, 09 Oct 2022 19:57:12 +0800</pubDate>
       
       <guid>https://smc.im/post/read-request-data-multiple-times-in-dotnetcore-webapi/</guid>
-      <description>说明 有时候我们在处理接口的业务之前，可能需要对请求数据进行预处理，或者在业务处理之后再次统一处理请求数据，该场景常见于 AOP 编程，比如 .net core 中的 f</description>
+      <description>怎样才能正确地重复读取 HttpContext.Request.Body 流对象？</description>
     </item>
     
     <item>
@@ -148,7 +148,7 @@
       <pubDate>Fri, 26 Aug 2022 00:04:05 +0800</pubDate>
       
       <guid>https://smc.im/post/resolve-integrity-error-in-hugo/</guid>
-      <description>错误描述 在 Github Pages 上部署 Hugo 博客后，网站样式丢失，打开浏览器 F12 控制台可以发现错误：Failed to find a valid digest in the &#39;integrity&#39; attribute for resource &amp;quot;xxx.css&amp;quot;, The resource has been blocked.。 解</description>
+      <description>解决 hugo 博客报错：Failed to find a valid digest in the &amp;#39;integrity&amp;#39; attribute for resource `xxx.css`, The resource has been blocked.</description>
     </item>
     
     <item>

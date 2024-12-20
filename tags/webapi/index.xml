@@ -31,7 +31,7 @@
       <pubDate>Sun, 09 Oct 2022 19:57:12 +0800</pubDate>
       
       <guid>https://smc.im/post/read-request-data-multiple-times-in-dotnetcore-webapi/</guid>
-      <description>说明 有时候我们在处理接口的业务之前，可能需要对请求数据进行预处理，或者在业务处理之后再次统一处理请求数据，该场景常见于 AOP 编程，比如 .net core 中的 f</description>
+      <description>怎样才能正确地重复读取 HttpContext.Request.Body 流对象？</description>
     </item>
     
     <item>

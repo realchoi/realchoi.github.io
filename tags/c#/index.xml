@@ -13,7 +13,7 @@
       <pubDate>Fri, 09 Jun 2023 14:34:44 +0800</pubDate>
       
       <guid>https://smc.im/post/custom-dynamic-object-comparator-in-csharp/</guid>
-      <description>有时我们在对两个相同类型的对象进行比较、或对两个相同泛型的集合进行去重等操作时，需要对对象的某几个字段进行比较，而不是全部字段。这就需要用到</description>
+      <description>在 C# 中，当我们需要按照自己的方式，对两个对象进行比较时，需要自定义对象比较器。</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Mon, 29 May 2023 13:51:11 +0800</pubDate>
       
       <guid>https://smc.im/post/get-the-sql-statement-and-parameters-according-to-the-iqueryable-object/</guid>
-      <description>在使用 Entity Framework 作为 ORM 的时候，我们可能会根据得到的某个 IQueryable 查询对象，来“翻译”其最终的执行 SQL 以及传入的参数。经过一番拼凑，我得到了以下的方法，在此记</description>
+      <description>使用 Entity Framework 查询数据库得到的 IQueryable 对象，怎么得到它实际查询的 SQL 语句？</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Tue, 31 Jan 2023 15:13:57 +0800</pubDate>
       
       <guid>https://smc.im/post/the-difference-between-method-groupby-and-tolookup/</guid>
-      <description>相同之处 C# 中的 GroupBy 方法，大家一般都知道是用来给数据集合做分组的，至于 ToLookup 方法，我本人用的比较少，估计很多人也不清楚是什么作用，其实它也可以对集合</description>
+      <description>C# 中的两个典型的分组函数：GroupBy 和 ToLookup 之间的区别。</description>
     </item>
     
     <item>

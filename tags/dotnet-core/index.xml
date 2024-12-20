@@ -13,7 +13,7 @@
       <pubDate>Sun, 12 Mar 2023 15:00:14 +0800</pubDate>
       
       <guid>https://smc.im/post/query-whether-array-parameter-intersect-with-array-field-in-the-database-in-ef-core/</guid>
-      <description>场景举例 表 student 中有一个数组类型的字段 hobbies，用来记录某个学生的所有业余爱好，此时想要查询业余爱好中包含羽毛球、篮球、吉他的所有学生，即</description>
+      <description>使用 EF Core 查询数据库数组之间的交集。</description>
     </item>
     
     <item>
@@ -49,7 +49,7 @@
       <pubDate>Sun, 09 Oct 2022 19:57:12 +0800</pubDate>
       
       <guid>https://smc.im/post/read-request-data-multiple-times-in-dotnetcore-webapi/</guid>
-      <description>说明 有时候我们在处理接口的业务之前，可能需要对请求数据进行预处理，或者在业务处理之后再次统一处理请求数据，该场景常见于 AOP 编程，比如 .net core 中的 f</description>
+      <description>怎样才能正确地重复读取 HttpContext.Request.Body 流对象？</description>
     </item>
     
     <item>
