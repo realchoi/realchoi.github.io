@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>aTrust on Choi&#39;s Notes</title>
+    <link>https://smc.im/tags/atrust/</link>
+    <description>Recent content in aTrust on Choi&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 26 Nov 2025 11:01:32 +0800</lastBuildDate><atom:link href="https://smc.im/tags/atrust/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>彻底解决 macOS 上 aTrust 与 Clash Tun 模式冲突：Docker 隔离与全能分流指南</title>
+      <link>https://smc.im/post/macos-resolve-atrust-clash-tun-conflict-with-docker/</link>
+      <pubDate>Wed, 26 Nov 2025 11:01:32 +0800</pubDate>
+      
+      <guid>https://smc.im/post/macos-resolve-atrust-clash-tun-conflict-with-docker/</guid>
+      <description>详解如何利用 OrbStack 和 Docker 隔离 aTrust VPN，配合 Clash Tun 模式彻底解决 macOS 下的路由冲突。实现同时流畅访问公司内网和 Google Antigravity 服务的终极网络方案。</description>
+    </item>
+    
+  </channel>
+</rss>

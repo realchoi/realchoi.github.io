@@ -6,7 +6,7 @@
     <description>Recent content on Choi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 11 Aug 2025 14:43:50 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Nov 2025 11:01:32 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🐼关于我</title>
       <link>https://smc.im/about/</link>
@@ -23,6 +23,15 @@
       
       <guid>https://smc.im/friend/</guid>
       <description>Pseudoyu Pseudoyu 囧囧 JOJO 囧囧 JOJO 🤖如想交换友链，可以发送邮件到 meetcds(AT)foxmail.com 联系我~</description>
+    </item>
+    
+    <item>
+      <title>彻底解决 macOS 上 aTrust 与 Clash Tun 模式冲突：Docker 隔离与全能分流指南</title>
+      <link>https://smc.im/post/macos-resolve-atrust-clash-tun-conflict-with-docker/</link>
+      <pubDate>Wed, 26 Nov 2025 11:01:32 +0800</pubDate>
+      
+      <guid>https://smc.im/post/macos-resolve-atrust-clash-tun-conflict-with-docker/</guid>
+      <description>详解如何利用 OrbStack 和 Docker 隔离 aTrust VPN，配合 Clash Tun 模式彻底解决 macOS 下的路由冲突。实现同时流畅访问公司内网和 Google Antigravity 服务的终极网络方案。</description>
     </item>
     
     <item>
