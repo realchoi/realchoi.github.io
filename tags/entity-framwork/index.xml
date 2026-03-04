@@ -11,7 +11,6 @@
       <title>Entity Framework 学习笔记</title>
       <link>https://smc.im/post/notes-of-learning-entity-framework/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://smc.im/post/notes-of-learning-entity-framework/</guid>
       <description>前言 做 .NET 项目时需要用到微软自家的 ORM 框架 Entity Framework，由于之前学识比较浅，没有接触过 Entity Framework，趁着这个机会，赶紧 Google 了一下相</description>
     </item>

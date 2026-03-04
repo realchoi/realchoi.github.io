@@ -11,7 +11,6 @@
       <title>使用 Github Actions 自动部署 hugo 博客</title>
       <link>https://smc.im/post/deploy-hugo-blog-with-github-actions/</link>
       <pubDate>Sun, 17 Dec 2023 13:03:07 +0800</pubDate>
-      
       <guid>https://smc.im/post/deploy-hugo-blog-with-github-actions/</guid>
       <description>使用 Github 自带的免费 CI 工具——Github Actions，实现网站的自动部署、文章的自动发布。</description>
     </item>
@@ -20,7 +19,6 @@
       <title>解决 hugo 中关于 integrity 的错误</title>
       <link>https://smc.im/post/resolve-integrity-error-in-hugo/</link>
       <pubDate>Fri, 26 Aug 2022 00:04:05 +0800</pubDate>
-      
       <guid>https://smc.im/post/resolve-integrity-error-in-hugo/</guid>
       <description>解决 hugo 博客报错：Failed to find a valid digest in the &amp;#39;integrity&amp;#39; attribute for resource `xxx.css`, The resource has been blocked.</description>
     </item>
@@ -29,7 +27,6 @@
       <title>我的第一篇 hugo 博客</title>
       <link>https://smc.im/post/first-hugo-post/</link>
       <pubDate>Sat, 28 May 2022 09:14:49 +0800</pubDate>
-      
       <guid>https://smc.im/post/first-hugo-post/</guid>
       <description>这是我第一次使用 hugo 搭建博客，这也是我第一个 hugo 博客的第一篇文章。 前两天，我刚装了人生第一台台式机，配置如下： 配置 参数 价格 处理器 AMD R5-5600 原盒 / 主板 微</description>
     </item>

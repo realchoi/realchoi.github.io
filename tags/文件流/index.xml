@@ -11,7 +11,6 @@
       <title>在 .net 6 中重复读取请求参数 body</title>
       <link>https://smc.im/post/repeated-reading-of-request-parameter-body-in-dotnet6/</link>
       <pubDate>Tue, 06 Dec 2022 14:37:16 +0800</pubDate>
-      
       <guid>https://smc.im/post/repeated-reading-of-request-parameter-body-in-dotnet6/</guid>
       <description>一句话总结 一般情况下，HttpContext.Request.Body 流对象不允许被重复读取，这是因为该流对象的 Position 是不允许进行修改操作的，一</description>
     </item>
@@ -20,7 +19,6 @@
       <title>在 .net core 中实现下载文件的接口</title>
       <link>https://smc.im/post/a-download-file-api-in-aspnetcore/</link>
       <pubDate>Mon, 22 Aug 2022 20:45:05 +0800</pubDate>
-      
       <guid>https://smc.im/post/a-download-file-api-in-aspnetcore/</guid>
       <description>缘起 今天写个下载文件的接口，可能对很多人来说很简单，但是我却遇到了这样那样的错误，这里记录一下。 Controller 层的返回类型 在 Asp.net core（现在叫 .NET 6）中，</description>
     </item>

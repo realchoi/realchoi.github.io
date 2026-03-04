@@ -11,7 +11,6 @@
       <title>使用 Github Actions 自动部署 hugo 博客</title>
       <link>https://smc.im/post/deploy-hugo-blog-with-github-actions/</link>
       <pubDate>Sun, 17 Dec 2023 13:03:07 +0800</pubDate>
-      
       <guid>https://smc.im/post/deploy-hugo-blog-with-github-actions/</guid>
       <description>使用 Github 自带的免费 CI 工具——Github Actions，实现网站的自动部署、文章的自动发布。</description>
     </item>

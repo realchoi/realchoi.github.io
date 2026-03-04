@@ -11,7 +11,6 @@
       <title>使用 Java 实现 ArrayList</title>
       <link>https://smc.im/post/implement-arraylist-in-java/</link>
       <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://smc.im/post/implement-arraylist-in-java/</guid>
       <description>ArrayList 基本介绍 ArrayList 是 List 接口中最为常用的一个实现类，从名字可以看出，它与数组有着千丝万缕的关系。实际上，ArrayList 就是在底层维护了一个数组，</description>
     </item>

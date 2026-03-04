@@ -11,7 +11,6 @@
       <title>使用 Java 实现单向链表</title>
       <link>https://smc.im/post/implement-single-linkedlist-in-java/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://smc.im/post/implement-single-linkedlist-in-java/</guid>
       <description>单向链表基本介绍 链表（Linked List）是一种常见的基础数据结构，是一种线性表，但是并不会按线性的顺序存储数据，实际上它是由节点（Nod</description>
     </item>

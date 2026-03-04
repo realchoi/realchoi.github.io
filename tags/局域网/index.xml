@@ -11,7 +11,6 @@
       <title>根据 IP 判断访问页面的用户是否来自内网</title>
       <link>https://smc.im/post/determine-whether-the-user-ip-is-from-the-intranet/</link>
       <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://smc.im/post/determine-whether-the-user-ip-is-from-the-intranet/</guid>
       <description>前言 最近做项目时遇到一个需求：判断当前访问的用户，和服务器是否在同一个内网中，然后进行不同的跳转。说白了，就是先获取用户的 IP ，然后判断其是否</description>
     </item>

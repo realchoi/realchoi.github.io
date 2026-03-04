@@ -11,7 +11,6 @@
       <title>如何在 PostgreSQL 中查询作为索引的字段</title>
       <link>https://smc.im/post/how-to-query-the-fields-used-as-indexes/</link>
       <pubDate>Fri, 26 Aug 2022 20:56:34 +0800</pubDate>
-      
       <guid>https://smc.im/post/how-to-query-the-fields-used-as-indexes/</guid>
       <description>需求 公司业务上有一个需求，在页面上选择两张表中的各一个字段，将二者建立业务上的外键关系，前提是需要两者都是索引字段，否则会影响后续的查询效率</description>
     </item>

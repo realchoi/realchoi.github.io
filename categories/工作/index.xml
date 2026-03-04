@@ -11,7 +11,6 @@
       <title>从节日礼物窥探当前处境变化</title>
       <link>https://smc.im/post/a-glimpse-of-current-changes-in-the-situation-from-holiday-gifts/</link>
       <pubDate>Thu, 02 Jun 2022 20:38:03 +0800</pubDate>
-      
       <guid>https://smc.im/post/a-glimpse-of-current-changes-in-the-situation-from-holiday-gifts/</guid>
       <description>端午节快乐 明天就是端午节了，以前在老家的时候，爸妈已经去草地上割了一些艾草回来，插在门框上。现在自己住到了城里，不想丢到这个温馨的传统，就只</description>
     </item>
@@ -20,7 +19,6 @@
       <title>使用 Java 实现 HashMap</title>
       <link>https://smc.im/post/implement-hashmap-in-java/</link>
       <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://smc.im/post/implement-hashmap-in-java/</guid>
       <description>HashMap 基本介绍 HashMap 是 Map 接口中最为常用的一个实现类，通过名字我们可以看出，它与 hash 算法密不可分。它的内部用来存放键值对。HashMap 的底层实现是数组</description>
     </item>
@@ -29,7 +27,6 @@
       <title>使用 Java 实现 ArrayList</title>
       <link>https://smc.im/post/implement-arraylist-in-java/</link>
       <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://smc.im/post/implement-arraylist-in-java/</guid>
       <description>ArrayList 基本介绍 ArrayList 是 List 接口中最为常用的一个实现类，从名字可以看出，它与数组有着千丝万缕的关系。实际上，ArrayList 就是在底层维护了一个数组，</description>
     </item>
@@ -38,7 +35,6 @@
       <title>使用 Java 实现单向链表</title>
       <link>https://smc.im/post/implement-single-linkedlist-in-java/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://smc.im/post/implement-single-linkedlist-in-java/</guid>
       <description>单向链表基本介绍 链表（Linked List）是一种常见的基础数据结构，是一种线性表，但是并不会按线性的顺序存储数据，实际上它是由节点（Nod</description>
     </item>
@@ -47,7 +43,6 @@
       <title>根据 IP 判断访问页面的用户是否来自内网</title>
       <link>https://smc.im/post/determine-whether-the-user-ip-is-from-the-intranet/</link>
       <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://smc.im/post/determine-whether-the-user-ip-is-from-the-intranet/</guid>
       <description>前言 最近做项目时遇到一个需求：判断当前访问的用户，和服务器是否在同一个内网中，然后进行不同的跳转。说白了，就是先获取用户的 IP ，然后判断其是否</description>
     </item>
@@ -56,7 +51,6 @@
       <title>利用 Cloudflare 进行免费的域名转发</title>
       <link>https://smc.im/post/cloudflare-for-free-domain-forwarding/</link>
       <pubDate>Wed, 29 Nov 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://smc.im/post/cloudflare-for-free-domain-forwarding/</guid>
       <description>前言 人人都能接触互联网的时代，估计你手上也有闲置的域名，为了不浪费，可以用来干一些其他的小事情，比如将自己的域名跳转到微博或者 QQ 空间等等。这</description>
     </item>

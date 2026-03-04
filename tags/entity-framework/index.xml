@@ -11,7 +11,6 @@
       <title>根据 IQueryable 对象得到其查询的 SQL 语句和参数</title>
       <link>https://smc.im/post/get-the-sql-statement-and-parameters-according-to-the-iqueryable-object/</link>
       <pubDate>Mon, 29 May 2023 13:51:11 +0800</pubDate>
-      
       <guid>https://smc.im/post/get-the-sql-statement-and-parameters-according-to-the-iqueryable-object/</guid>
       <description>使用 Entity Framework 查询数据库得到的 IQueryable 对象，怎么得到它实际查询的 SQL 语句？</description>
     </item>
@@ -20,7 +19,6 @@
       <title>使用 EF Core 查询数组参数与数据库中的数组字段是否有交集</title>
       <link>https://smc.im/post/query-whether-array-parameter-intersect-with-array-field-in-the-database-in-ef-core/</link>
       <pubDate>Sun, 12 Mar 2023 15:00:14 +0800</pubDate>
-      
       <guid>https://smc.im/post/query-whether-array-parameter-intersect-with-array-field-in-the-database-in-ef-core/</guid>
       <description>使用 EF Core 查询数据库数组之间的交集。</description>
     </item>

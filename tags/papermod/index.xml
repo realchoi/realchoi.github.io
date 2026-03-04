@@ -11,7 +11,6 @@
       <title>解决 hugo 中关于 integrity 的错误</title>
       <link>https://smc.im/post/resolve-integrity-error-in-hugo/</link>
       <pubDate>Fri, 26 Aug 2022 00:04:05 +0800</pubDate>
-      
       <guid>https://smc.im/post/resolve-integrity-error-in-hugo/</guid>
       <description>解决 hugo 博客报错：Failed to find a valid digest in the &amp;#39;integrity&amp;#39; attribute for resource `xxx.css`, The resource has been blocked.</description>
     </item>
