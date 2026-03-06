@@ -4,8 +4,12 @@
     <title>gitlab on Choi&#39;s Notes</title>
     <link>https://smc.im/tags/gitlab/</link>
     <description>Recent content in gitlab on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/favicon.ico</url>
+      <link>https://smc.im/favicon.ico</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh-CN</language>
     <lastBuildDate>Fri, 20 Dec 2024 14:48:59 +0800</lastBuildDate><atom:link href="https://smc.im/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>git 如何忽略已经添加和提交的文件？</title>

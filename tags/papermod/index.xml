@@ -4,8 +4,12 @@
     <title>PaperMod on Choi&#39;s Notes</title>
     <link>https://smc.im/tags/papermod/</link>
     <description>Recent content in PaperMod on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/favicon.ico</url>
+      <link>https://smc.im/favicon.ico</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh-CN</language>
     <lastBuildDate>Fri, 26 Aug 2022 00:04:05 +0800</lastBuildDate><atom:link href="https://smc.im/tags/papermod/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>解决 hugo 中关于 integrity 的错误</title>

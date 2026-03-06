@@ -4,15 +4,19 @@
     <title>HashMap on Choi&#39;s Notes</title>
     <link>https://smc.im/tags/hashmap/</link>
     <description>Recent content in HashMap on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/favicon.ico</url>
+      <link>https://smc.im/favicon.ico</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh-CN</language>
     <lastBuildDate>Sat, 02 Jun 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://smc.im/tags/hashmap/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 Java 实现 HashMap</title>
       <link>https://smc.im/post/implement-hashmap-in-java/</link>
       <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
       <guid>https://smc.im/post/implement-hashmap-in-java/</guid>
-      <description>HashMap 基本介绍 HashMap 是 Map 接口中最为常用的一个实现类，通过名字我们可以看出，它与 hash 算法密不可分。它的内部用来存放键值对。HashMap 的底层实现是数组</description>
+      <description>用 Java 手写 HashMap，理解数组、链表与哈希寻址等核心实现思路。</description>
     </item>
     
   </channel>

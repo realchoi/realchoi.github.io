@@ -4,8 +4,12 @@
     <title>网络方案 on Choi&#39;s Notes</title>
     <link>https://smc.im/categories/%E7%BD%91%E7%BB%9C%E6%96%B9%E6%A1%88/</link>
     <description>Recent content in 网络方案 on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/favicon.ico</url>
+      <link>https://smc.im/favicon.ico</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh-CN</language>
     <lastBuildDate>Wed, 26 Nov 2025 11:01:32 +0800</lastBuildDate><atom:link href="https://smc.im/categories/%E7%BD%91%E7%BB%9C%E6%96%B9%E6%A1%88/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>彻底解决 macOS 上 aTrust 与 Clash Tun 模式冲突：Docker 隔离与全能分流指南</title>

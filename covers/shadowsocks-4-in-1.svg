@@ -1,0 +1,62 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title>Shadowsocks 一键安装脚本 四合一脚本把部署、配置与管理整合成一条更省事的路径</title>
+  <desc>技术 / 网络脚本</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A0F1F"/>
+      <stop offset="0.42" stop-color="#143C8D"/>
+      <stop offset="1" stop-color="#3A8DFF"/>
+    </linearGradient>
+    <radialGradient id="glowTop" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1260 180) rotate(90) scale(280 340)">
+      <stop stop-color="#D8E9FF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#D8E9FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowSide" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(240 220) rotate(90) scale(240 300)">
+      <stop stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shadeBottom" x1="0" y1="520" x2="0" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#061018" stop-opacity="0"/>
+      <stop offset="1" stop-color="#061018" stop-opacity="0.72"/>
+    </linearGradient>
+    <filter id="noise" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.06"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="52"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1260" cy="180" r="320" fill="url(#glowTop)"/>
+  <circle cx="240" cy="220" r="250" fill="url(#glowSide)"/>
+  <g opacity="0.22" filter="url(#blur)">
+    <ellipse cx="1260" cy="662" rx="320" ry="110" fill="#FFFFFF"/>
+    <ellipse cx="460" cy="760" rx="260" ry="84" fill="#D8E9FF"/>
+  </g>
+  <rect width="1600" height="900" filter="url(#noise)" opacity="0.16"/>
+  <path d="M0 600C126 560 242 550 348 572C454 594 556 650 654 740C724 804 806 846 900 866C1010 888 1120 888 1230 866C1340 844 1463 786 1600 692V900H0V600Z" fill="#FFFFFF" fill-opacity="0.085"/>
+  <path d="M0 674C160 624 290 620 390 662C490 704 582 774 668 872H0V674Z" fill="#FFFFFF" fill-opacity="0.055"/>
+  <rect x="0" y="458" width="1600" height="442" fill="url(#shadeBottom)"/>
+
+  <g opacity="0.22">
+  <path d="M1015 244C1100 194 1188 188 1278 226C1368 264 1458 352 1548 490" stroke="#D8E9FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M980 336C1096 298 1201 314 1296 384C1391 454 1468 543 1528 652" stroke="#D8E9FF" stroke-opacity="0.7" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="1118" cy="214" r="10" fill="#D8E9FF"/>
+  <circle cx="1296" cy="384" r="10" fill="#3A8DFF"/>
+  <circle cx="1498" cy="610" r="12" fill="#D8E9FF"/>
+</g>
+
+
+  <rect x="104" y="150" width="248" height="40" rx="20" fill="#FFFFFF" fill-opacity="0.12"/>
+  <text x="128" y="176" fill="#F8FAFC" font-size="21" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" letter-spacing="0.8">技术 / 网络脚本</text>
+
+  <text x="104" y="500" fill="#FFFFFF" font-size="98" font-weight="700" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">Shadowsocks</text>
+  <text x="104" y="606" fill="#FFFFFF" font-size="98" font-weight="700" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">一键安装脚本</text>
+  <line x1="110" y1="646" x2="248" y2="646" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="3" stroke-linecap="round"/>
+  <text x="104" y="698" fill="#E9F1F7" fill-opacity="0.92" font-size="29" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">四合一脚本把部署、配置与管理整合成一条更省事的路径</text>
+</svg>

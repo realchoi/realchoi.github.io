@@ -4,8 +4,12 @@
     <title>MacMini on Choi&#39;s Notes</title>
     <link>https://smc.im/tags/macmini/</link>
     <description>Recent content in MacMini on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/favicon.ico</url>
+      <link>https://smc.im/favicon.ico</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh-CN</language>
     <lastBuildDate>Mon, 11 Aug 2025 14:43:50 +0800</lastBuildDate><atom:link href="https://smc.im/tags/macmini/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在外接 SSD 中安装 macOS 遇到的一些问题</title>

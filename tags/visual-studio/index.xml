@@ -4,15 +4,19 @@
     <title>Visual Studio on Choi&#39;s Notes</title>
     <link>https://smc.im/tags/visual-studio/</link>
     <description>Recent content in Visual Studio on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/favicon.ico</url>
+      <link>https://smc.im/favicon.ico</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh-CN</language>
     <lastBuildDate>Sat, 06 May 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://smc.im/tags/visual-studio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>OpenCV 的安装与 Visual Studio 环境的配置</title>
       <link>https://smc.im/post/opencv-installation-visualstudio-configuration/</link>
       <pubDate>Sat, 06 May 2017 00:00:00 +0000</pubDate>
       <guid>https://smc.im/post/opencv-installation-visualstudio-configuration/</guid>
-      <description>前言 大学四年很快就结束了，前面玩了三年六个月，最后六个月，怎么说也得学点点点点点东西吧&amp;hellip; 额，我说的就是毕业设计（笑）。 很幸运，</description>
+      <description>记录 OpenCV 的安装过程，以及在 Visual Studio 中配置开发环境的方法。</description>
     </item>
     
   </channel>

@@ -4,15 +4,19 @@
     <title>小米 on Choi&#39;s Notes</title>
     <link>https://smc.im/tags/%E5%B0%8F%E7%B1%B3/</link>
     <description>Recent content in 小米 on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/favicon.ico</url>
+      <link>https://smc.im/favicon.ico</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh-CN</language>
     <lastBuildDate>Wed, 16 Nov 2022 20:37:15 +0800</lastBuildDate><atom:link href="https://smc.im/tags/%E5%B0%8F%E7%B1%B3/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在小米手机上使用 Google Voice 时提示“加载对话时出错，请重试”</title>
       <link>https://smc.im/post/google-voice-prompts-error-loading-conversation-on-xiaomi-phone/</link>
       <pubDate>Wed, 16 Nov 2022 20:37:15 +0800</pubDate>
       <guid>https://smc.im/post/google-voice-prompts-error-loading-conversation-on-xiaomi-phone/</guid>
-      <description>由来 最近想注册一个 Google Voice 号码，网上搜索加上在群里咨询后，发现大家都说现在个人注册 GV 号很难放号了，索性今天花钱买了一个，人民币 45 元。用途就不说明</description>
+      <description>记录小米手机使用 Google Voice 时“加载对话出错”的现象与排查思路。</description>
     </item>
     
   </channel>

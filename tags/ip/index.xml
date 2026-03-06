@@ -4,15 +4,19 @@
     <title>IP on Choi&#39;s Notes</title>
     <link>https://smc.im/tags/ip/</link>
     <description>Recent content in IP on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/favicon.ico</url>
+      <link>https://smc.im/favicon.ico</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh-CN</language>
     <lastBuildDate>Thu, 30 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://smc.im/tags/ip/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>根据 IP 判断访问页面的用户是否来自内网</title>
       <link>https://smc.im/post/determine-whether-the-user-ip-is-from-the-intranet/</link>
       <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
       <guid>https://smc.im/post/determine-whether-the-user-ip-is-from-the-intranet/</guid>
-      <description>前言 最近做项目时遇到一个需求：判断当前访问的用户，和服务器是否在同一个内网中，然后进行不同的跳转。说白了，就是先获取用户的 IP ，然后判断其是否</description>
+      <description>介绍如何根据 IP 判断用户是否来自内网，可用于页面展示和访问控制场景。</description>
     </item>
     
   </channel>

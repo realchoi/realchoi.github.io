@@ -1,0 +1,62 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title>利用 Cloudflare 免费进行域名转发 把闲置域名做 301 跳转时，一种省钱而稳定的处理方式</title>
+  <desc>技术 / 域名与网络</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A1208"/>
+      <stop offset="0.42" stop-color="#A84B12"/>
+      <stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+    <radialGradient id="glowTop" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1260 180) rotate(90) scale(280 340)">
+      <stop stop-color="#FED7AA" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#FED7AA" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowSide" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(240 220) rotate(90) scale(240 300)">
+      <stop stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shadeBottom" x1="0" y1="520" x2="0" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#061018" stop-opacity="0"/>
+      <stop offset="1" stop-color="#061018" stop-opacity="0.72"/>
+    </linearGradient>
+    <filter id="noise" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.06"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="52"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1260" cy="180" r="320" fill="url(#glowTop)"/>
+  <circle cx="240" cy="220" r="250" fill="url(#glowSide)"/>
+  <g opacity="0.22" filter="url(#blur)">
+    <ellipse cx="1260" cy="662" rx="320" ry="110" fill="#FFFFFF"/>
+    <ellipse cx="460" cy="760" rx="260" ry="84" fill="#FED7AA"/>
+  </g>
+  <rect width="1600" height="900" filter="url(#noise)" opacity="0.16"/>
+  <path d="M0 600C126 560 242 550 348 572C454 594 556 650 654 740C724 804 806 846 900 866C1010 888 1120 888 1230 866C1340 844 1463 786 1600 692V900H0V600Z" fill="#FFFFFF" fill-opacity="0.085"/>
+  <path d="M0 674C160 624 290 620 390 662C490 704 582 774 668 872H0V674Z" fill="#FFFFFF" fill-opacity="0.055"/>
+  <rect x="0" y="458" width="1600" height="442" fill="url(#shadeBottom)"/>
+
+  <g opacity="0.22">
+  <path d="M996 618C1088 548 1196 512 1320 510C1396 508 1460 520 1512 546" stroke="#FED7AA" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1062 290C1148 274 1234 286 1320 326C1386 356 1448 412 1508 494" stroke="#FED7AA" stroke-opacity="0.7" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="1100" cy="585" r="12" fill="#F97316"/>
+  <circle cx="1320" cy="510" r="12" fill="#FED7AA"/>
+  <circle cx="1490" cy="540" r="11" fill="#FED7AA"/>
+</g>
+
+
+  <rect x="104" y="150" width="248" height="40" rx="20" fill="#FFFFFF" fill-opacity="0.12"/>
+  <text x="128" y="176" fill="#F8FAFC" font-size="21" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" letter-spacing="0.8">技术 / 域名与网络</text>
+
+  <text x="104" y="500" fill="#FFFFFF" font-size="98" font-weight="700" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">利用 Cloudflare</text>
+  <text x="104" y="606" fill="#FFFFFF" font-size="98" font-weight="700" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">免费进行域名转发</text>
+  <line x1="110" y1="646" x2="248" y2="646" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="3" stroke-linecap="round"/>
+  <text x="104" y="698" fill="#E9F1F7" fill-opacity="0.92" font-size="29" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">把闲置域名做 301 跳转时，一种省钱而稳定的处理方式</text>
+</svg>

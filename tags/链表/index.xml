@@ -4,15 +4,19 @@
     <title>链表 on Choi&#39;s Notes</title>
     <link>https://smc.im/tags/%E9%93%BE%E8%A1%A8/</link>
     <description>Recent content in 链表 on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/favicon.ico</url>
+      <link>https://smc.im/favicon.ico</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh-CN</language>
     <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://smc.im/tags/%E9%93%BE%E8%A1%A8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 Java 实现单向链表</title>
       <link>https://smc.im/post/implement-single-linkedlist-in-java/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       <guid>https://smc.im/post/implement-single-linkedlist-in-java/</guid>
-      <description>单向链表基本介绍 链表（Linked List）是一种常见的基础数据结构，是一种线性表，但是并不会按线性的顺序存储数据，实际上它是由节点（Nod</description>
+      <description>用 Java 手写单向链表，说明节点结构、增删查改与链表遍历的基本实现。</description>
     </item>
     
   </channel>

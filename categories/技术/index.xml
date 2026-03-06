@@ -4,8 +4,12 @@
     <title>技术 on Choi&#39;s Notes</title>
     <link>https://smc.im/categories/%E6%8A%80%E6%9C%AF/</link>
     <description>Recent content in 技术 on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/favicon.ico</url>
+      <link>https://smc.im/favicon.ico</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh-CN</language>
     <lastBuildDate>Fri, 20 Dec 2024 14:48:59 +0800</lastBuildDate><atom:link href="https://smc.im/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>git 如何忽略已经添加和提交的文件？</title>
@@ -76,7 +80,7 @@
       <link>https://smc.im/post/repeated-reading-of-request-parameter-body-in-dotnet6/</link>
       <pubDate>Tue, 06 Dec 2022 14:37:16 +0800</pubDate>
       <guid>https://smc.im/post/repeated-reading-of-request-parameter-body-in-dotnet6/</guid>
-      <description>一句话总结 一般情况下，HttpContext.Request.Body 流对象不允许被重复读取，这是因为该流对象的 Position 是不允许进行修改操作的，一</description>
+      <description>讲解在 .NET 6 中重复读取 Request.Body 的正确方式，核心是 EnableBuffering 的使用。</description>
     </item>
     
     <item>
@@ -84,7 +88,7 @@
       <link>https://smc.im/post/catching-exceptions-globally-in-dotnetcore-webapi/</link>
       <pubDate>Tue, 15 Nov 2022 21:54:08 +0800</pubDate>
       <guid>https://smc.im/post/catching-exceptions-globally-in-dotnetcore-webapi/</guid>
-      <description>为什么需要写日志 不管是写接口，还是写 MVC 程序，我们都必须对程序中的每个异常做记录，这样才能知道哪里发生了错误，以便更好地改进代码。拿 Asp.Net Core WebApi 接口</description>
+      <description>介绍 Asp.Net Core WebApi 全局异常捕获的实现方式，统一处理错误响应。</description>
     </item>
     
     <item>
@@ -92,7 +96,7 @@
       <link>https://smc.im/post/default-value-of-parameters-in-dotnetcore-webapi/</link>
       <pubDate>Wed, 09 Nov 2022 20:13:15 +0800</pubDate>
       <guid>https://smc.im/post/default-value-of-parameters-in-dotnetcore-webapi/</guid>
-      <description>说明 有时候我们在设计一个 api 的时候，希望能给它设置一个默认值，在调用方没有给该参数传值的时候使用该默认值，最常见的例子就是获取数据列表接口，有</description>
+      <description>讲解 Asp.Net Core WebApi 接口参数默认值的处理方式与模型绑定注意点。</description>
     </item>
     
     <item>
@@ -108,7 +112,7 @@
       <link>https://smc.im/post/how-to-query-the-fields-used-as-indexes/</link>
       <pubDate>Fri, 26 Aug 2022 20:56:34 +0800</pubDate>
       <guid>https://smc.im/post/how-to-query-the-fields-used-as-indexes/</guid>
-      <description>需求 公司业务上有一个需求，在页面上选择两张表中的各一个字段，将二者建立业务上的外键关系，前提是需要两者都是索引字段，否则会影响后续的查询效率</description>
+      <description>介绍在 PostgreSQL 中查询哪些字段建立了索引，便于排查与优化数据库。</description>
     </item>
     
     <item>
@@ -124,7 +128,7 @@
       <link>https://smc.im/post/a-download-file-api-in-aspnetcore/</link>
       <pubDate>Mon, 22 Aug 2022 20:45:05 +0800</pubDate>
       <guid>https://smc.im/post/a-download-file-api-in-aspnetcore/</guid>
-      <description>缘起 今天写个下载文件的接口，可能对很多人来说很简单，但是我却遇到了这样那样的错误，这里记录一下。 Controller 层的返回类型 在 Asp.net core（现在叫 .NET 6）中，</description>
+      <description>总结 Asp.Net Core 下载文件接口的实现方式、流返回方案与常见问题。</description>
     </item>
     
     <item>
@@ -132,8 +136,7 @@
       <link>https://smc.im/post/download-file-using-javascript/</link>
       <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
       <guid>https://smc.im/post/download-file-using-javascript/</guid>
-      <description>&lt;p&gt;项目上遇到 Excel 导出的功能，应该是个烂大街的需求了，但是自己水平有限，还是捣鼓了一段时间。后端实现都容易，最大的坑反而是文件下载。这里记录一下方便回忆。&lt;/p&gt;
-&lt;p&gt;大家都知道，下载文件最简单的办法，可能就是在前台添加一个 &lt;code&gt;a&lt;/code&gt; 标签，然后给其写上 &lt;code&gt;href&lt;/code&gt; 属性，指向文件的路径即可，但是个人觉得这种方式体验不太友好。于是我就选择使用 &lt;code&gt;ajax&lt;/code&gt; 请求后台接口来下载，这个时候问题来了 —— 这种方法无法触发浏览器打开保存文件的对话框，所以就没法下载文件。关键是后台方法全部走完，没有异常和报错，前台也平静如水，心里一百个纳闷。&lt;/p&gt;</description>
+      <description>绕开 ajax 下载限制时，模拟表单提交往往是更稳的方案</description>
     </item>
     
     <item>
@@ -141,7 +144,7 @@
       <link>https://smc.im/post/notes-of-learning-entity-framework/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
       <guid>https://smc.im/post/notes-of-learning-entity-framework/</guid>
-      <description>前言 做 .NET 项目时需要用到微软自家的 ORM 框架 Entity Framework，由于之前学识比较浅，没有接触过 Entity Framework，趁着这个机会，赶紧 Google 了一下相</description>
+      <description>把零散知识点整理成能反复翻阅的一份 EF 入门与回顾记录</description>
     </item>
     
     <item>
@@ -149,7 +152,7 @@
       <link>https://smc.im/post/implement-hashmap-in-java/</link>
       <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
       <guid>https://smc.im/post/implement-hashmap-in-java/</guid>
-      <description>HashMap 基本介绍 HashMap 是 Map 接口中最为常用的一个实现类，通过名字我们可以看出，它与 hash 算法密不可分。它的内部用来存放键值对。HashMap 的底层实现是数组</description>
+      <description>用 Java 手写 HashMap，理解数组、链表与哈希寻址等核心实现思路。</description>
     </item>
     
     <item>
@@ -157,7 +160,7 @@
       <link>https://smc.im/post/implement-arraylist-in-java/</link>
       <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
       <guid>https://smc.im/post/implement-arraylist-in-java/</guid>
-      <description>ArrayList 基本介绍 ArrayList 是 List 接口中最为常用的一个实现类，从名字可以看出，它与数组有着千丝万缕的关系。实际上，ArrayList 就是在底层维护了一个数组，</description>
+      <description>用 Java 手写 ArrayList，梳理动态数组的底层结构、扩容机制与常见操作。</description>
     </item>
     
     <item>
@@ -165,7 +168,7 @@
       <link>https://smc.im/post/implement-single-linkedlist-in-java/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       <guid>https://smc.im/post/implement-single-linkedlist-in-java/</guid>
-      <description>单向链表基本介绍 链表（Linked List）是一种常见的基础数据结构，是一种线性表，但是并不会按线性的顺序存储数据，实际上它是由节点（Nod</description>
+      <description>用 Java 手写单向链表，说明节点结构、增删查改与链表遍历的基本实现。</description>
     </item>
     
     <item>
@@ -173,7 +176,7 @@
       <link>https://smc.im/post/determine-whether-the-user-ip-is-from-the-intranet/</link>
       <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
       <guid>https://smc.im/post/determine-whether-the-user-ip-is-from-the-intranet/</guid>
-      <description>前言 最近做项目时遇到一个需求：判断当前访问的用户，和服务器是否在同一个内网中，然后进行不同的跳转。说白了，就是先获取用户的 IP ，然后判断其是否</description>
+      <description>介绍如何根据 IP 判断用户是否来自内网，可用于页面展示和访问控制场景。</description>
     </item>
     
     <item>
@@ -181,7 +184,7 @@
       <link>https://smc.im/post/cloudflare-for-free-domain-forwarding/</link>
       <pubDate>Wed, 29 Nov 2017 00:00:00 +0000</pubDate>
       <guid>https://smc.im/post/cloudflare-for-free-domain-forwarding/</guid>
-      <description>前言 人人都能接触互联网的时代，估计你手上也有闲置的域名，为了不浪费，可以用来干一些其他的小事情，比如将自己的域名跳转到微博或者 QQ 空间等等。这</description>
+      <description>记录使用 Cloudflare 免费实现域名转发的方法，适合把闲置域名做 301 跳转。</description>
     </item>
     
     <item>
@@ -189,7 +192,7 @@
       <link>https://smc.im/post/all-grammars-of-markdown/</link>
       <pubDate>Sun, 23 Jul 2017 19:15:33 +0800</pubDate>
       <guid>https://smc.im/post/all-grammars-of-markdown/</guid>
-      <description>Markdown 简介 Markdown 是一种轻量级标记语言，创始人为 John Gruber 。它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的 XHTML（或者 HTML ）文档。这种语言吸</description>
+      <description>汇总 Markdown 常用与扩展语法，适合作为写博客和整理文档时的速查手册。</description>
     </item>
     
     <item>
@@ -197,7 +200,7 @@
       <link>https://smc.im/post/shadowsocks-installation-scripts/</link>
       <pubDate>Fri, 02 Jun 2017 00:00:00 +0000</pubDate>
       <guid>https://smc.im/post/shadowsocks-installation-scripts/</guid>
-      <description>前言 不说你也懂，还是不说了。 本脚本适用环境 系统支持：CentOS 6+，Debian 7+，Ubuntu 12+ 内存要求：≥128M 日期：2017 年 5</description>
+      <description>介绍 Shadowsocks 四合一一键安装脚本的适用环境、安装步骤与基本使用方式。</description>
     </item>
     
     <item>
@@ -205,7 +208,7 @@
       <link>https://smc.im/post/opencv-installation-visualstudio-configuration/</link>
       <pubDate>Sat, 06 May 2017 00:00:00 +0000</pubDate>
       <guid>https://smc.im/post/opencv-installation-visualstudio-configuration/</guid>
-      <description>前言 大学四年很快就结束了，前面玩了三年六个月，最后六个月，怎么说也得学点点点点点东西吧&amp;hellip; 额，我说的就是毕业设计（笑）。 很幸运，</description>
+      <description>记录 OpenCV 的安装过程，以及在 Visual Studio 中配置开发环境的方法。</description>
     </item>
     
   </channel>

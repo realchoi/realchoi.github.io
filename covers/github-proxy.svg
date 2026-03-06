@@ -1,0 +1,70 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title>如何给 GitHub 设置代理 让 GitHub 与公司 GitLab 在同一台机器上更顺畅地共存</title>
+  <desc>技术 / Git 与网络</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A0F1F"/>
+      <stop offset="0.42" stop-color="#143C8D"/>
+      <stop offset="1" stop-color="#3A8DFF"/>
+    </linearGradient>
+    <radialGradient id="glowTop" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1260 180) rotate(90) scale(280 340)">
+      <stop stop-color="#D8E9FF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#D8E9FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowSide" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(240 220) rotate(90) scale(240 300)">
+      <stop stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shadeBottom" x1="0" y1="520" x2="0" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#061018" stop-opacity="0"/>
+      <stop offset="1" stop-color="#061018" stop-opacity="0.72"/>
+    </linearGradient>
+    <filter id="noise" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.06"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="52"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1260" cy="180" r="320" fill="url(#glowTop)"/>
+  <circle cx="240" cy="220" r="250" fill="url(#glowSide)"/>
+  <g opacity="0.22" filter="url(#blur)">
+    <ellipse cx="1260" cy="662" rx="320" ry="110" fill="#FFFFFF"/>
+    <ellipse cx="460" cy="760" rx="260" ry="84" fill="#D8E9FF"/>
+  </g>
+  <rect width="1600" height="900" filter="url(#noise)" opacity="0.16"/>
+  <path d="M0 600C126 560 242 550 348 572C454 594 556 650 654 740C724 804 806 846 900 866C1010 888 1120 888 1230 866C1340 844 1463 786 1600 692V900H0V600Z" fill="#FFFFFF" fill-opacity="0.085"/>
+  <path d="M0 674C160 624 290 620 390 662C490 704 582 774 668 872H0V674Z" fill="#FFFFFF" fill-opacity="0.055"/>
+  <rect x="0" y="458" width="1600" height="442" fill="url(#shadeBottom)"/>
+
+    <g opacity="0.2">
+      <path d="M1014 626C1108 568 1198 526 1284 500C1370 474 1450 470 1526 486" stroke="#EAF3FF" stroke-opacity="0.44" stroke-width="5" stroke-linecap="round"/>
+      <path d="M1108 332C1180 318 1250 328 1318 362C1386 396 1450 454 1510 536" stroke="#EAF3FF" stroke-opacity="0.32" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="1118" cy="560" r="14" fill="#FFFFFF" fill-opacity="0.24"/>
+      <circle cx="1304" cy="492" r="14" fill="#D8E9FF" fill-opacity="0.42"/>
+      <circle cx="1496" cy="488" r="14" fill="#FFFFFF" fill-opacity="0.24"/>
+    </g>
+
+  <g opacity="0.22">
+  <path d="M996 618C1088 548 1196 512 1320 510C1396 508 1460 520 1512 546" stroke="#D8E9FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1062 290C1148 274 1234 286 1320 326C1406 366 1474 432 1524 524" stroke="#D8E9FF" stroke-opacity="0.7" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="1100" cy="585" r="12" fill="#3A8DFF"/>
+  <circle cx="1320" cy="510" r="12" fill="#D8E9FF"/>
+  <circle cx="1490" cy="540" r="11" fill="#D8E9FF"/>
+</g>
+
+
+  <rect x="104" y="150" width="248" height="40" rx="20" fill="#FFFFFF" fill-opacity="0.12"/>
+  <text x="128" y="176" fill="#F8FAFC" font-size="21" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif" letter-spacing="0.8">技术 / Git 与网络</text>
+
+  <text x="104" y="500" fill="#FFFFFF" font-size="98" font-weight="700" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">如何给 GitHub</text>
+  <text x="104" y="606" fill="#FFFFFF" font-size="98" font-weight="700" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">设置代理</text>
+  <line x1="110" y1="646" x2="248" y2="646" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="3" stroke-linecap="round"/>
+  <text x="104" y="698" fill="#E9F1F7" fill-opacity="0.92" font-size="29" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">让 GitHub 与公司 GitLab 在同一台机器上更顺畅地共存</text>
+</svg>

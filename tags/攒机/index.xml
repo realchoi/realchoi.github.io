@@ -4,15 +4,19 @@
     <title>攒机 on Choi&#39;s Notes</title>
     <link>https://smc.im/tags/%E6%94%92%E6%9C%BA/</link>
     <description>Recent content in 攒机 on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/favicon.ico</url>
+      <link>https://smc.im/favicon.ico</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh-CN</language>
     <lastBuildDate>Sat, 28 May 2022 09:14:49 +0800</lastBuildDate><atom:link href="https://smc.im/tags/%E6%94%92%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>我的第一篇 hugo 博客</title>
       <link>https://smc.im/post/first-hugo-post/</link>
       <pubDate>Sat, 28 May 2022 09:14:49 +0800</pubDate>
       <guid>https://smc.im/post/first-hugo-post/</guid>
-      <description>这是我第一次使用 hugo 搭建博客，这也是我第一个 hugo 博客的第一篇文章。 前两天，我刚装了人生第一台台式机，配置如下： 配置 参数 价格 处理器 AMD R5-5600 原盒 / 主板 微</description>
+      <description>记录从 Hexo 迁移到 Hugo 后写下的第一篇文章，也是博客重新开始的起点。</description>
     </item>
     
   </channel>
