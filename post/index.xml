@@ -10,7 +10,15 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 26 Nov 2025 11:01:32 +0800</lastBuildDate><atom:link href="https://smc.im/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Mar 2026 17:05:00 +0800</lastBuildDate><atom:link href="https://smc.im/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第一次写 skill，我给 Hugo 博客做了个封面生成器</title>
+      <link>https://smc.im/post/skill-development-notes-with-hugo-cover-generator/</link>
+      <pubDate>Fri, 06 Mar 2026 17:05:00 +0800</pubDate>
+      <guid>https://smc.im/post/skill-development-notes-with-hugo-cover-generator/</guid>
+      <description>第一次折腾 skill，我先拿 Hugo 博客封面开刀，顺手做了个自动生成 SVG cover 的小工具，也记下了这一路的踩坑和体会。</description>
+    </item>
+    
     <item>
       <title>彻底解决 macOS 上 aTrust 与 Clash Tun 模式冲突：Docker 隔离与全能分流指南</title>
       <link>https://smc.im/post/macos-resolve-atrust-clash-tun-conflict-with-docker/</link>
