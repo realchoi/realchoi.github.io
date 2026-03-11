@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>FlClash on Choi&#39;s Notes</title>
+    <link>https://smc.im/tags/flclash/</link>
+    <description>Recent content in FlClash on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/favicon.ico</url>
+      <link>https://smc.im/favicon.ico</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 11 Mar 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://smc.im/tags/flclash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>成功重新登录美区 PayPal：一次网络环境排查记录</title>
+      <link>https://smc.im/post/successfully-relogin-us-paypal-network-settings/</link>
+      <pubDate>Wed, 11 Mar 2026 10:00:00 +0800</pubDate>
+      <guid>https://smc.im/post/successfully-relogin-us-paypal-network-settings/</guid>
+      <description>记录我为重新登录美区 PayPal 而做的一次网络环境排查，包括 IPv6、FlClash DNS、WebRTC 和登录前检测这几步。</description>
+    </item>
+    
+  </channel>
+</rss>
