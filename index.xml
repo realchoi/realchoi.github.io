@@ -10,21 +10,21 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 11 Mar 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>🐼关于我</title>
-      <link>https://smc.im/about/</link>
-      <pubDate>Sun, 02 Feb 2020 16:23:32 +0800</pubDate>
-      <guid>https://smc.im/about/</guid>
-      <description>概述 .Net Core 平台开发者，自媒体业余玩家，爱好剪辑音乐视频。 曾在两周内实现微信视频号从 0 粉涨到 2.1W 粉；播放量也从 0 涨到 3000W；点赞量超过 20W。</description>
-    </item>
-    
+    <lastBuildDate>Tue, 09 Jun 2026 17:00:00 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>👫友链</title>
       <link>https://smc.im/friend/</link>
       <pubDate>Sat, 27 Aug 2022 14:24:32 +0800</pubDate>
       <guid>https://smc.im/friend/</guid>
       <description>Pseudoyu Pseudoyu 囧囧 JOJO 囧囧 JOJO 🤖如想交换友链，可以发送邮件到 meetcds(AT)foxmail.com 联系我~</description>
+    </item>
+    
+    <item>
+      <title>Picser</title>
+      <link>https://smc.im/works/picser/</link>
+      <pubDate>Tue, 09 Jun 2026 17:00:00 +0800</pubDate>
+      <guid>https://smc.im/works/picser/</guid>
+      <description>Picser 是我做的一款 macOS 看图软件：打开一个文件夹，就能快速翻图、缩放看细节、裁剪导出、用标签整理素材。</description>
     </item>
     
     <item>

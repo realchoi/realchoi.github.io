@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Works on Choi&#39;s Notes</title>
+    <link>https://smc.im/works/</link>
+    <description>Recent content in Works on Choi&#39;s Notes</description>
+    <image>
+      <url>https://smc.im/favicon.ico</url>
+      <link>https://smc.im/favicon.ico</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 09 Jun 2026 17:00:00 +0800</lastBuildDate><atom:link href="https://smc.im/works/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Picser</title>
+      <link>https://smc.im/works/picser/</link>
+      <pubDate>Tue, 09 Jun 2026 17:00:00 +0800</pubDate>
+      <guid>https://smc.im/works/picser/</guid>
+      <description>Picser 是我做的一款 macOS 看图软件：打开一个文件夹，就能快速翻图、缩放看细节、裁剪导出、用标签整理素材。</description>
+    </item>
+    
+  </channel>
+</rss>
