@@ -10,13 +10,21 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 09 Jun 2026 17:00:00 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Jul 2026 11:41:56 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>👫友链</title>
       <link>https://smc.im/friend/</link>
       <pubDate>Sat, 27 Aug 2022 14:24:32 +0800</pubDate>
       <guid>https://smc.im/friend/</guid>
       <description>Pseudoyu Pseudoyu 囧囧 JOJO 囧囧 JOJO 🤖如想交换友链，可以发送邮件到 meetcds(AT)foxmail.com 联系我~</description>
+    </item>
+    
+    <item>
+      <title>zoxide 常用命令总结</title>
+      <link>https://smc.im/post/zoxide-common-commands/</link>
+      <pubDate>Mon, 13 Jul 2026 11:41:56 +0800</pubDate>
+      <guid>https://smc.im/post/zoxide-common-commands/</guid>
+      <description>整理 zoxide 的常用目录跳转、查询、权重调整、记录清理、Shell 初始化和环境变量配置命令。</description>
     </item>
     
     <item>

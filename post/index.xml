@@ -10,7 +10,15 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 11 Mar 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://smc.im/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Jul 2026 11:41:56 +0800</lastBuildDate><atom:link href="https://smc.im/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>zoxide 常用命令总结</title>
+      <link>https://smc.im/post/zoxide-common-commands/</link>
+      <pubDate>Mon, 13 Jul 2026 11:41:56 +0800</pubDate>
+      <guid>https://smc.im/post/zoxide-common-commands/</guid>
+      <description>整理 zoxide 的常用目录跳转、查询、权重调整、记录清理、Shell 初始化和环境变量配置命令。</description>
+    </item>
+    
     <item>
       <title>成功重新登录美区 PayPal：一次网络环境排查记录</title>
       <link>https://smc.im/post/successfully-relogin-us-paypal-network-settings/</link>

@@ -10,7 +10,15 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 26 Nov 2025 11:01:32 +0800</lastBuildDate><atom:link href="https://smc.im/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Jul 2026 11:41:56 +0800</lastBuildDate><atom:link href="https://smc.im/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>zoxide 常用命令总结</title>
+      <link>https://smc.im/post/zoxide-common-commands/</link>
+      <pubDate>Mon, 13 Jul 2026 11:41:56 +0800</pubDate>
+      <guid>https://smc.im/post/zoxide-common-commands/</guid>
+      <description>整理 zoxide 的常用目录跳转、查询、权重调整、记录清理、Shell 初始化和环境变量配置命令。</description>
+    </item>
+    
     <item>
       <title>彻底解决 macOS 上 aTrust 与 Clash Tun 模式冲突：Docker 隔离与全能分流指南</title>
       <link>https://smc.im/post/macos-resolve-atrust-clash-tun-conflict-with-docker/</link>

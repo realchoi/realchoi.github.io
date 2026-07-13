@@ -10,7 +10,47 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 11 Mar 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://smc.im/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Jul 2026 11:41:56 +0800</lastBuildDate><atom:link href="https://smc.im/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>macOS</title>
+      <link>https://smc.im/tags/macos/</link>
+      <pubDate>Mon, 13 Jul 2026 11:41:56 +0800</pubDate>
+      <guid>https://smc.im/tags/macos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
+      <link>https://smc.im/tags/shell/</link>
+      <pubDate>Mon, 13 Jul 2026 11:41:56 +0800</pubDate>
+      <guid>https://smc.im/tags/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zoxide</title>
+      <link>https://smc.im/tags/zoxide/</link>
+      <pubDate>Mon, 13 Jul 2026 11:41:56 +0800</pubDate>
+      <guid>https://smc.im/tags/zoxide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zsh</title>
+      <link>https://smc.im/tags/zsh/</link>
+      <pubDate>Mon, 13 Jul 2026 11:41:56 +0800</pubDate>
+      <guid>https://smc.im/tags/zsh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>命令行</title>
+      <link>https://smc.im/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/</link>
+      <pubDate>Mon, 13 Jul 2026 11:41:56 +0800</pubDate>
+      <guid>https://smc.im/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>2FA</title>
       <link>https://smc.im/tags/2fa/</link>
@@ -152,14 +192,6 @@
       <link>https://smc.im/tags/mac/</link>
       <pubDate>Wed, 26 Nov 2025 11:01:32 +0800</pubDate>
       <guid>https://smc.im/tags/mac/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>macOS</title>
-      <link>https://smc.im/tags/macos/</link>
-      <pubDate>Wed, 26 Nov 2025 11:01:32 +0800</pubDate>
-      <guid>https://smc.im/tags/macos/</guid>
       <description></description>
     </item>
     
