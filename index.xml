@@ -10,13 +10,21 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 13 Jul 2026 11:41:56 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Jul 2026 14:00:00 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>👫友链</title>
       <link>https://smc.im/friend/</link>
       <pubDate>Sat, 27 Aug 2022 14:24:32 +0800</pubDate>
       <guid>https://smc.im/friend/</guid>
       <description>Pseudoyu Pseudoyu 囧囧 JOJO 囧囧 JOJO 🤖如想交换友链，可以发送邮件到 meetcds(AT)foxmail.com 联系我~</description>
+    </item>
+    
+    <item>
+      <title>Debian 13 VPS 安全加固与 Xray VLESS &#43; REALITY 手动部署</title>
+      <link>https://smc.im/post/debian-13-xray-vless-reality-hardening/</link>
+      <pubDate>Sat, 18 Jul 2026 14:00:00 +0800</pubDate>
+      <guid>https://smc.im/post/debian-13-xray-vless-reality-hardening/</guid>
+      <description>从 SSH 密钥登录、UFW 与 Fail2Ban 开始，加固一台新的 Debian 13 VPS，再手动部署 Xray VLESS &#43; REALITY、Nginx 回落站点与客户端配置。</description>
     </item>
     
     <item>

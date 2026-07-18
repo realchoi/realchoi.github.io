@@ -10,7 +10,71 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 13 Jul 2026 11:41:56 +0800</lastBuildDate><atom:link href="https://smc.im/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Jul 2026 14:00:00 +0800</lastBuildDate><atom:link href="https://smc.im/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debian</title>
+      <link>https://smc.im/tags/debian/</link>
+      <pubDate>Sat, 18 Jul 2026 14:00:00 +0800</pubDate>
+      <guid>https://smc.im/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fail2Ban</title>
+      <link>https://smc.im/tags/fail2ban/</link>
+      <pubDate>Sat, 18 Jul 2026 14:00:00 +0800</pubDate>
+      <guid>https://smc.im/tags/fail2ban/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nginx</title>
+      <link>https://smc.im/tags/nginx/</link>
+      <pubDate>Sat, 18 Jul 2026 14:00:00 +0800</pubDate>
+      <guid>https://smc.im/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>REALITY</title>
+      <link>https://smc.im/tags/reality/</link>
+      <pubDate>Sat, 18 Jul 2026 14:00:00 +0800</pubDate>
+      <guid>https://smc.im/tags/reality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SSH</title>
+      <link>https://smc.im/tags/ssh/</link>
+      <pubDate>Sat, 18 Jul 2026 14:00:00 +0800</pubDate>
+      <guid>https://smc.im/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VLESS</title>
+      <link>https://smc.im/tags/vless/</link>
+      <pubDate>Sat, 18 Jul 2026 14:00:00 +0800</pubDate>
+      <guid>https://smc.im/tags/vless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VPS</title>
+      <link>https://smc.im/tags/vps/</link>
+      <pubDate>Sat, 18 Jul 2026 14:00:00 +0800</pubDate>
+      <guid>https://smc.im/tags/vps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Xray</title>
+      <link>https://smc.im/tags/xray/</link>
+      <pubDate>Sat, 18 Jul 2026 14:00:00 +0800</pubDate>
+      <guid>https://smc.im/tags/xray/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>macOS</title>
       <link>https://smc.im/tags/macos/</link>
