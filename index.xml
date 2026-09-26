@@ -10,7 +10,23 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 18 Jul 2026 14:00:00 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Sep 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://smc.im/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Picser</title>
+      <link>https://smc.im/works/picser/</link>
+      <pubDate>Tue, 09 Jun 2026 17:00:00 +0800</pubDate>
+      <guid>https://smc.im/works/picser/</guid>
+      <description>Picser 是我做的一款 macOS 看图软件：打开一个文件夹，就能快速翻图、缩放看细节、裁剪导出、用标签整理素材。</description>
+    </item>
+    
+    <item>
+      <title>Crownline · 王冠纪</title>
+      <link>https://smc.im/works/crownline/</link>
+      <pubDate>Sat, 26 Sep 2026 10:00:00 +0800</pubDate>
+      <guid>https://smc.im/works/crownline/</guid>
+      <description>Crownline（王冠纪）是我做的一个交互式世界王朝时间轴：沿着时间线浏览中国历代王朝与世界各地政权的兴衰，站在任意一年看当时的天下，还能把两个政权放在一起对比。</description>
+    </item>
+    
     <item>
       <title>👫友链</title>
       <link>https://smc.im/friend/</link>
@@ -33,14 +49,6 @@
       <pubDate>Mon, 13 Jul 2026 11:41:56 +0800</pubDate>
       <guid>https://smc.im/post/zoxide-common-commands/</guid>
       <description>整理 zoxide 的常用目录跳转、查询、权重调整、记录清理、Shell 初始化和环境变量配置命令。</description>
-    </item>
-    
-    <item>
-      <title>Picser</title>
-      <link>https://smc.im/works/picser/</link>
-      <pubDate>Tue, 09 Jun 2026 17:00:00 +0800</pubDate>
-      <guid>https://smc.im/works/picser/</guid>
-      <description>Picser 是我做的一款 macOS 看图软件：打开一个文件夹，就能快速翻图、缩放看细节、裁剪导出、用标签整理素材。</description>
     </item>
     
     <item>
